@@ -1,0 +1,299 @@
+/* Hero Section */
+.hero {
+    padding-top: 120px;
+    padding-bottom: var(--space-12);
+    background: var(--color-background-secondary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradiente animado elegante */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 0% 0%, var(--color-primary-1-100) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, var(--color-primary-2-100) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, var(--color-accent-1-100) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, var(--color-accent-2-100) 0%, transparent 50%);
+    opacity: 0.4;
+    z-index: 1;
+    animation: gradientShift 20s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(45deg, transparent 40%, var(--color-primary-1-50) 50%, transparent 60%),
+        linear-gradient(-45deg, transparent 40%, var(--color-primary-2-50) 50%, transparent 60%);
+    opacity: 0.2;
+    z-index: 2;
+    animation: gradientFlow 15s ease-in-out infinite;
+}
+
+/* Animaciones del gradiente */
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background:
+            radial-gradient(circle at 0% 0%, var(--color-primary-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 100% 0%, var(--color-primary-2-100) 0%, transparent 50%),
+            radial-gradient(circle at 100% 100%, var(--color-accent-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, var(--color-accent-2-100) 0%, transparent 50%);
+    }
+
+    25% {
+        background:
+            radial-gradient(circle at 25% 25%, var(--color-primary-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, var(--color-primary-2-100) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, var(--color-accent-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, var(--color-accent-2-100) 0%, transparent 50%);
+    }
+
+    50% {
+        background:
+            radial-gradient(circle at 50% 50%, var(--color-primary-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-primary-2-100) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-accent-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-accent-2-100) 0%, transparent 50%);
+    }
+
+    75% {
+        background:
+            radial-gradient(circle at 75% 75%, var(--color-primary-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, var(--color-primary-2-100) 0%, transparent 50%),
+            radial-gradient(circle at 25% 25%, var(--color-accent-1-100) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, var(--color-accent-2-100) 0%, transparent 50%);
+    }
+}
+
+@keyframes gradientFlow {
+
+    0%,
+    100% {
+        background:
+            linear-gradient(45deg, transparent 40%, var(--color-primary-1-50) 50%, transparent 60%),
+            linear-gradient(-45deg, transparent 40%, var(--color-primary-2-50) 50%, transparent 60%);
+    }
+
+    50% {
+        background:
+            linear-gradient(45deg, transparent 30%, var(--color-primary-1-50) 50%, transparent 70%),
+            linear-gradient(-45deg, transparent 30%, var(--color-primary-2-50) 50%, transparent 70%);
+    }
+}
+
+/* Contenido del hero */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+/* Modo oscuro para hero */
+[data-theme="dark"] .hero {
+    background: var(--color-background-secondary);
+}
+
+[data-theme="dark"] .hero::before {
+    background:
+        radial-gradient(circle at 0% 0%, var(--color-primary-1-900) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, var(--color-primary-2-900) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, var(--color-accent-1-900) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, var(--color-accent-2-900) 0%, transparent 50%);
+    opacity: 0.2;
+    animation: gradientShiftDark 20s ease-in-out infinite;
+}
+
+[data-theme="dark"] .hero::after {
+    background:
+        linear-gradient(45deg, transparent 40%, var(--color-primary-1-800) 50%, transparent 60%),
+        linear-gradient(-45deg, transparent 40%, var(--color-primary-2-800) 50%, transparent 60%);
+    opacity: 0.15;
+    animation: gradientFlowDark 15s ease-in-out infinite;
+}
+
+/* Animaciones del gradiente para modo oscuro */
+@keyframes gradientShiftDark {
+
+    0%,
+    100% {
+        background:
+            radial-gradient(circle at 0% 0%, var(--color-primary-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 100% 0%, var(--color-primary-2-900) 0%, transparent 50%),
+            radial-gradient(circle at 100% 100%, var(--color-accent-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, var(--color-accent-2-900) 0%, transparent 50%);
+    }
+
+    25% {
+        background:
+            radial-gradient(circle at 25% 25%, var(--color-primary-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, var(--color-primary-2-900) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, var(--color-accent-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, var(--color-accent-2-900) 0%, transparent 50%);
+    }
+
+    50% {
+        background:
+            radial-gradient(circle at 50% 50%, var(--color-primary-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-primary-2-900) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-accent-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, var(--color-accent-2-900) 0%, transparent 50%);
+    }
+
+    75% {
+        background:
+            radial-gradient(circle at 75% 75%, var(--color-primary-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, var(--color-primary-2-900) 0%, transparent 50%),
+            radial-gradient(circle at 25% 25%, var(--color-accent-1-900) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, var(--color-accent-2-900) 0%, transparent 50%);
+    }
+}
+
+@keyframes gradientFlowDark {
+
+    0%,
+    100% {
+        background:
+            linear-gradient(45deg, transparent 40%, var(--color-primary-1-800) 50%, transparent 60%),
+            linear-gradient(-45deg, transparent 40%, var(--color-primary-2-800) 50%, transparent 60%);
+    }
+
+    50% {
+        background:
+            linear-gradient(45deg, transparent 30%, var(--color-primary-1-800) 50%, transparent 70%),
+            linear-gradient(-45deg, transparent 30%, var(--color-primary-2-800) 50%, transparent 70%);
+    }
+}
+
+/* Texto del hero */
+.hero-text {
+    max-width: 500px;
+    position: relative;
+    z-index: 4;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.7;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 4;
+}
+
+/* Imagen del hero */
+.hero-image {
+    position: relative;
+    border-radius: var(--space-3);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        gap: var(--space-6);
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 100px;
+        padding-bottom: var(--space-8);
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+}

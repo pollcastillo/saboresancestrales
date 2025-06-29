@@ -1,0 +1,189 @@
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+/* Botón primario */
+.btn-primary {
+    background-color: var(--color-primary-1-600);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-1-700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212, 101, 40, 0.3);
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary-1-800);
+    transform: translateY(0);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: var(--color-background-component);
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-2-50);
+    border-color: var(--color-primary-2-300);
+    color: var(--color-primary-2-700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(24, 90, 72, 0.15);
+}
+
+.btn-secondary:active {
+    background-color: var(--color-primary-2-100);
+    transform: translateY(0);
+}
+
+/* Botón de acento */
+.btn-accent {
+    background-color: var(--color-accent-5-600);
+    color: white;
+}
+
+.btn-accent:hover {
+    background-color: var(--color-accent-5-700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(218, 165, 32, 0.3);
+}
+
+/* Botón de éxito */
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--color-success-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+/* Botón de advertencia */
+.btn-warning {
+    background-color: var(--color-warning);
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: var(--color-warning-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+}
+
+/* Botón de error */
+.btn-error {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.btn-error:hover {
+    background-color: var(--color-error-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+}
+
+/* Botón cuadrado */
+.btn-square {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Botón pequeño */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* Botón grande */
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+/* Botón deshabilitado */
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    .btn-square {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Botón de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--color-background-secondary);
+}
+
+.theme-icon {
+    font-size: 20px;
+    color: var(--color-text-primary);
+    transition: color 0.2s ease;
+}
+
+.theme-icon.light {
+    display: block;
+}
+
+.theme-icon.dark {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon.light {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon.dark {
+    display: block;
+}

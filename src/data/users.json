@@ -1,0 +1,84 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "cedula": "12345",
+            "role": "admin",
+            "fullName": "Administrador Principal",
+            "email": "admin@saboresancestrales.com",
+            "active": true,
+            "createdAt": "2024-01-01 00:00:00"
+        },
+        {
+            "id": 2,
+            "username": "maria",
+            "cedula": "54321",
+            "role": "admin",
+            "fullName": "María González",
+            "email": "maria@saboresancestrales.com",
+            "active": true,
+            "createdAt": "2024-01-15 00:00:00"
+        },
+        {
+            "id": 3,
+            "username": "juan",
+            "cedula": "67890",
+            "role": "editor",
+            "fullName": "Juan Pérez",
+            "email": "juan@saboresancestrales.com",
+            "active": true,
+            "createdAt": "2024-02-01 00:00:00"
+        },
+        {
+            "id": 4,
+            "username": "ana",
+            "cedula": "09876",
+            "role": "editor",
+            "fullName": "Ana Rodríguez",
+            "email": "ana@saboresancestrales.com",
+            "active": true,
+            "createdAt": "2024-02-15 00:00:00"
+        },
+        {
+            "id": 5,
+            "username": "carlos",
+            "cedula": "11223",
+            "role": "viewer",
+            "fullName": "Carlos López",
+            "email": "carlos@saboresancestrales.com",
+            "active": true,
+            "createdAt": "2024-03-01 00:00:00"
+        }
+    ],
+    "roles": [
+        {
+            "id": "admin",
+            "name": "Administrador",
+            "description": "Acceso completo al sistema",
+            "permissions": [
+                "read",
+                "write",
+                "delete",
+                "manage_users"
+            ]
+        },
+        {
+            "id": "editor",
+            "name": "Editor",
+            "description": "Puede crear y editar contenido",
+            "permissions": [
+                "read",
+                "write"
+            ]
+        },
+        {
+            "id": "viewer",
+            "name": "Visualizador",
+            "description": "Solo puede ver contenido",
+            "permissions": [
+                "read"
+            ]
+        }
+    ]
+}

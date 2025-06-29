@@ -1,0 +1,178 @@
+{
+    "dashboard_stats": {
+        "total_services": {
+            "value": 3,
+            "label": "Servicios Activos",
+            "chart_data": [
+                {
+                    "month": "Ene",
+                    "value": 2
+                },
+                {
+                    "month": "Feb",
+                    "value": 2
+                },
+                {
+                    "month": "Mar",
+                    "value": 3
+                },
+                {
+                    "month": "Abr",
+                    "value": 3
+                },
+                {
+                    "month": "May",
+                    "value": 3
+                },
+                {
+                    "month": "Jun",
+                    "value": 3
+                }
+            ],
+            "trend": "up",
+            "percentage": "+50%"
+        },
+        "total_tips": {
+            "value": 156,
+            "label": "Tips de Cocina",
+            "chart_data": [
+                {
+                    "month": "Ene",
+                    "value": 120
+                },
+                {
+                    "month": "Feb",
+                    "value": 135
+                },
+                {
+                    "month": "Mar",
+                    "value": 142
+                },
+                {
+                    "month": "Abr",
+                    "value": 148
+                },
+                {
+                    "month": "May",
+                    "value": 152
+                },
+                {
+                    "month": "Jun",
+                    "value": 156
+                }
+            ],
+            "trend": "up",
+            "percentage": "+8%"
+        },
+        "total_orders": {
+            "value": 342,
+            "label": "Pedidos Este Mes",
+            "chart_data": [
+                {
+                    "month": "Ene",
+                    "value": 280
+                },
+                {
+                    "month": "Feb",
+                    "value": 295
+                },
+                {
+                    "month": "Mar",
+                    "value": 310
+                },
+                {
+                    "month": "Abr",
+                    "value": 325
+                },
+                {
+                    "month": "May",
+                    "value": 338
+                },
+                {
+                    "month": "Jun",
+                    "value": 342
+                }
+            ],
+            "trend": "up",
+            "percentage": "+22%"
+        },
+        "revenue": {
+            "value": 28450,
+            "label": "Ingresos (MXN)",
+            "chart_data": [
+                {
+                    "month": "Ene",
+                    "value": 22000
+                },
+                {
+                    "month": "Feb",
+                    "value": 23500
+                },
+                {
+                    "month": "Mar",
+                    "value": 24800
+                },
+                {
+                    "month": "Abr",
+                    "value": 26200
+                },
+                {
+                    "month": "May",
+                    "value": 27500
+                },
+                {
+                    "month": "Jun",
+                    "value": 28450
+                }
+            ],
+            "trend": "up",
+            "percentage": "+29%"
+        }
+    },
+    "monthly_data": {
+        "services_growth": [
+            {
+                "month": "Enero",
+                "services": 2,
+                "tips": 120,
+                "orders": 280,
+                "revenue": 22000
+            },
+            {
+                "month": "Febrero",
+                "services": 2,
+                "tips": 135,
+                "orders": 295,
+                "revenue": 23500
+            },
+            {
+                "month": "Marzo",
+                "services": 3,
+                "tips": 142,
+                "orders": 310,
+                "revenue": 24800
+            },
+            {
+                "month": "Abril",
+                "services": 3,
+                "tips": 148,
+                "orders": 325,
+                "revenue": 26200
+            },
+            {
+                "month": "Mayo",
+                "services": 3,
+                "tips": 152,
+                "orders": 338,
+                "revenue": 27500
+            },
+            {
+                "month": "Junio",
+                "services": 3,
+                "tips": 156,
+                "orders": 342,
+                "revenue": 28450
+            }
+        ]
+    }
+}

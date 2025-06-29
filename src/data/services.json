@@ -1,0 +1,99 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "title": "Catering Corporativo",
+            "description": "Menús especializados para reuniones, conferencias y eventos empresariales con opciones personalizables.",
+            "icon": "ph-fill ph-coffee",
+            "category": "catering",
+            "badge": "Popular",
+            "active": true,
+            "featured": true,
+            "order": 1,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 2,
+            "title": "Eventos Especiales",
+            "description": "Celebraciones de empresa, inauguraciones y eventos de networking con servicio completo.",
+            "icon": "ph-fill ph-calendar",
+            "category": "eventos",
+            "badge": "Destacado",
+            "active": true,
+            "featured": true,
+            "order": 2,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 3,
+            "title": "Coffee Breaks",
+            "description": "Pausas gourmet con café de especialidad y pastelería artesanal para mantener la energía.",
+            "icon": "ph-fill ph-coffee-bean",
+            "category": "catering",
+            "badge": null,
+            "active": true,
+            "featured": false,
+            "order": 3,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 4,
+            "title": "Menús Saludables",
+            "description": "Opciones nutritivas y balanceadas para el bienestar de tu equipo con ingredientes frescos.",
+            "icon": "ph-fill ph-heart",
+            "category": "menus",
+            "badge": null,
+            "active": true,
+            "featured": false,
+            "order": 4,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 5,
+            "title": "Desayunos Ejecutivos",
+            "description": "Desayunos completos para reuniones matutinas con opciones dulces y saladas.",
+            "icon": "ph-fill ph-sun",
+            "category": "catering",
+            "badge": null,
+            "active": true,
+            "featured": false,
+            "order": 5,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 6,
+            "title": "Catering a Domicilio",
+            "description": "Llevamos nuestros sabores hasta tu oficina o lugar de evento con servicio completo.",
+            "icon": "ph-fill ph-car-profile",
+            "category": "catering",
+            "badge": null,
+            "active": true,
+            "featured": false,
+            "order": 6,
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        }
+    ],
+    "categories": [
+        {
+            "id": "catering",
+            "name": "Catering",
+            "color": "#D46528"
+        },
+        {
+            "id": "eventos",
+            "name": "Eventos",
+            "color": "#185A48"
+        },
+        {
+            "id": "menus",
+            "name": "Menús",
+            "color": "#8B4513"
+        }
+    ]
+}

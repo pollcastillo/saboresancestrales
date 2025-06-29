@@ -1,0 +1,203 @@
+{
+    "tips": [
+        {
+            "id": 1,
+            "title": "Conservación de Hierbas Frescas",
+            "description": "Envuelve las hierbas frescas en papel húmedo y guárdalas en el refrigerador. Esto mantendrá su frescura hasta por una semana.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-leaf",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 2,
+            "title": "Cocción Perfecta de Arroz",
+            "description": "Para un arroz perfecto, usa la proporción 1:2 (arroz:agua). Deja reposar 10 minutos después de cocinar para que se asiente.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-bowl-food",
+            "difficulty": "intermedio",
+            "time": "25 min"
+        },
+        {
+            "id": 3,
+            "title": "Marinado Express",
+            "description": "Para marinados rápidos, usa jugo de limón, aceite de oliva y hierbas. Solo 30 minutos pueden transformar el sabor de tus carnes.",
+            "category": "sabores",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "30 min"
+        },
+        {
+            "id": 4,
+            "title": "Presentación Profesional",
+            "description": "Usa el principio del triángulo para presentar platos: proteína, carbohidrato y vegetal en forma triangular para un aspecto más profesional.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-star",
+            "difficulty": "intermedio",
+            "time": "10 min"
+        },
+        {
+            "id": 5,
+            "title": "Temperatura de Servicio",
+            "description": "Los platos calientes deben servirse a 60°C y los fríos a máximo 4°C. Esto garantiza seguridad alimentaria y mejor sabor.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 6,
+            "title": "Salsas Reducidas",
+            "description": "Para salsas más intensas, reduce el líquido a fuego lento hasta que se reduzca a la mitad. Esto concentra los sabores.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "avanzado",
+            "time": "45 min"
+        },
+        {
+            "id": 7,
+            "title": "Corte de Vegetales",
+            "description": "Corta todos los vegetales del mismo tamaño para una cocción uniforme. Esto es especialmente importante para eventos grandes.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-scissors",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 8,
+            "title": "Almacenamiento de Especias",
+            "description": "Guarda las especias en frascos herméticos lejos del calor y la luz. Esto preserva su sabor y aroma por más tiempo.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-package",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 9,
+            "title": "Técnica de Blanqueado",
+            "description": "Para vegetales crujientes, blánquealos en agua hirviendo por 2-3 minutos y luego sumérgelos en agua helada.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-waves",
+            "difficulty": "intermedio",
+            "time": "8 min"
+        },
+        {
+            "id": 10,
+            "title": "Balance de Sabores",
+            "description": "Sigue la regla de los 5 sabores: dulce, salado, ácido, amargo y umami. Un plato balanceado debe tener al menos 3 de estos elementos.",
+            "category": "sabores",
+            "icon": "ph-fill ph-heart",
+            "difficulty": "avanzado",
+            "time": "20 min"
+        },
+        {
+            "id": 11,
+            "title": "Preparación Anticipada",
+            "description": "Para eventos grandes, prepara ingredientes hasta 24 horas antes. Esto reduce el estrés y mejora la calidad del servicio.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-clock",
+            "difficulty": "intermedio",
+            "time": "60 min"
+        },
+        {
+            "id": 12,
+            "title": "Técnica de Emulsión",
+            "description": "Para salsas cremosas, añade el aceite gota a gota mientras bates constantemente. Esto evita que se separe la emulsión.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-arrows-clockwise",
+            "difficulty": "avanzado",
+            "time": "15 min"
+        },
+        {
+            "id": 13,
+            "title": "Limpieza de Tablas de Corte",
+            "description": "Después de cortar carnes, limpia la tabla con agua caliente y jabón, luego desinféctala con vinagre blanco o limón.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 14,
+            "title": "Mantenimiento de Cuchillos",
+            "description": "Lava los cuchillos inmediatamente después de usar, sécalos bien y guárdalos en un bloque de madera para mantener el filo.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "fácil",
+            "time": "3 min"
+        },
+        {
+            "id": 15,
+            "title": "Limpieza de Ollas de Acero",
+            "description": "Para ollas con residuos quemados, usa bicarbonato de sodio y agua caliente. Deja reposar 30 minutos antes de fregar.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-cooking-pot",
+            "difficulty": "intermedio",
+            "time": "35 min"
+        },
+        {
+            "id": 16,
+            "title": "Desinfección de Superficies",
+            "description": "Limpia las superficies de trabajo con una solución de 1 parte de vinagre por 3 partes de agua antes y después de cocinar.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 17,
+            "title": "Limpieza de Batidoras",
+            "description": "Desmonta las cuchillas de la batidora y límpialas por separado. Usa un cepillo pequeño para llegar a las áreas difíciles.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-lightning",
+            "difficulty": "intermedio",
+            "time": "8 min"
+        },
+        {
+            "id": 18,
+            "title": "Mantenimiento de Sartenes",
+            "description": "Para sartenes antiadherentes, usa esponjas suaves y evita utensilios metálicos. Seca completamente antes de guardar.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-circle",
+            "difficulty": "fácil",
+            "time": "5 min"
+        }
+    ],
+    "categories": [
+        {
+            "id": "conservacion",
+            "name": "Conservación",
+            "color": "var(--color-primary-2-600)"
+        },
+        {
+            "id": "tecnicas",
+            "name": "Técnicas",
+            "color": "var(--color-primary-1-600)"
+        },
+        {
+            "id": "sabores",
+            "name": "Sabores",
+            "color": "var(--color-accent-1-600)"
+        },
+        {
+            "id": "presentacion",
+            "name": "Presentación",
+            "color": "var(--color-accent-2-600)"
+        },
+        {
+            "id": "seguridad",
+            "name": "Seguridad",
+            "color": "var(--color-accent-3-600)"
+        },
+        {
+            "id": "organizacion",
+            "name": "Organización",
+            "color": "var(--color-accent-4-600)"
+        },
+        {
+            "id": "limpieza",
+            "name": "Limpieza",
+            "color": "var(--color-accent-5-600)"
+        }
+    ]
+}

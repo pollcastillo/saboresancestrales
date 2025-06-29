@@ -1,0 +1,233 @@
+/* Variables CSS para colores */
+:root {
+    /* Colores principales */
+    --color-primary-1: #D46528;
+    --color-primary-2: #185A48;
+
+    /* Variantes del color principal 1 (naranja) */
+    --color-primary-1-100: #FEF2EC;
+    --color-primary-1-200: #FDE4D9;
+    --color-primary-1-300: #FBC7B3;
+    --color-primary-1-400: #F8A38D;
+    --color-primary-1-500: #F47F67;
+    --color-primary-1-600: #D46528;
+    --color-primary-1-700: #B54D1F;
+    --color-primary-1-800: #963A16;
+    --color-primary-1-900: #772A0E;
+    --color-primary-1-950: #5A1D08;
+    --color-primary-1-1000: #3D1204;
+
+    /* Variantes del color principal 2 (verde) */
+    --color-primary-2-100: #F0F7F5;
+    --color-primary-2-200: #E1EFEA;
+    --color-primary-2-300: #C3DFD5;
+    --color-primary-2-400: #A5CFC0;
+    --color-primary-2-500: #87BFAB;
+    --color-primary-2-600: #185A48;
+    --color-primary-2-700: #134639;
+    --color-primary-2-800: #0E322A;
+    --color-primary-2-900: #091E1B;
+    --color-primary-2-950: #061412;
+    --color-primary-2-1000: #030A09;
+
+    /* Colores de tema */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-component: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #E5E5E5;
+
+    /* Espaciado - Grilla de 8 */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-7: 56px;
+    --space-8: 64px;
+    --space-9: 72px;
+    --space-10: 80px;
+    --space-11: 88px;
+    --space-12: 96px;
+    --space-13: 104px;
+    --space-14: 112px;
+    --space-15: 120px;
+    --space-16: 128px;
+    --space-17: 136px;
+    --space-18: 144px;
+    --space-19: 152px;
+    --space-20: 160px;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+    --bg-primary: #191919;
+    --bg-secondary: #121212;
+    --bg-component: #121212;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-muted: #999999;
+    --border-color: #333333;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+/* Aplicar también a elementos específicos que puedan tener scroll */
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Para contenedores con scroll */
+.scrollable,
+[class*="scroll"],
+.table-container,
+.modal-content,
+.notification-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollable::-webkit-scrollbar,
+[class*="scroll"]::-webkit-scrollbar,
+.table-container::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar,
+.notification-container::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-2);
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: var(--space-2);
+    color: var(--text-secondary);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-primary-1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-1-700);
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Secciones */
+section {
+    padding: var(--space-8) 0;
+}
+
+/* Utilidades */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-1);
+    }
+
+    section {
+        padding: var(--space-6) 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}

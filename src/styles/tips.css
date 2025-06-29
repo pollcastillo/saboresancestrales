@@ -1,0 +1,263 @@
+/* Tips de Cocina Section */
+.tips {
+    padding: 80px 0;
+    background-color: var(--color-background-secondary);
+}
+
+.tips-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.tips-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+}
+
+.tips-description {
+    font-size: 20px;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filtros de categorías */
+.tips-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    background-color: var(--color-background-component);
+    border: 2px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 12px 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary-1-600);
+    color: var(--color-primary-1-600);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary-1-600);
+    border-color: var(--color-primary-1-600);
+    color: white;
+}
+
+/* Grid de tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+/* Tarjeta de tip */
+.tip-card {
+    background-color: var(--color-background-component);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tip-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--tip-category-color, var(--color-primary-1));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--color-shadow);
+    border-color: var(--tip-category-color, var(--color-primary-1));
+}
+
+/* Header de la tarjeta */
+.tip-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.tip-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--tip-category-color, var(--color-primary-1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.tip-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    flex: 1;
+}
+
+/* Contenido del tip */
+.tip-description {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Meta información */
+.tip-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+.tip-category {
+    background-color: var(--tip-category-color, var(--color-primary-1));
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tip-details {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.tip-difficulty,
+.tip-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Estados de carga */
+.tips-loading {
+    text-align: center;
+    padding: 64px 0;
+    color: var(--color-text-secondary);
+}
+
+.tips-error {
+    text-align: center;
+    padding: 64px 0;
+    color: #dc3545;
+}
+
+/* Animaciones */
+.tip-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .tips-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tips {
+        padding: 64px 0;
+    }
+
+    .tips-title {
+        font-size: 36px;
+    }
+
+    .tips-description {
+        font-size: 18px;
+    }
+
+    .tips-filters {
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tip-card {
+        padding: 24px;
+    }
+
+    .tip-header {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .tip-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .tip-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tips-title {
+        font-size: 28px;
+    }
+
+    .tip-card {
+        padding: 20px;
+    }
+
+    .tip-meta {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Sabores Ancestrales</title>
+    <link rel="stylesheet" href="src/styles/theme.css">
+    <link rel="stylesheet" href="src/styles/administration/fonts.css">
+    <link rel="stylesheet" href="src/styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/regular/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/fill/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/bold/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/light/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/duotone/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/thin/style.css">
+    <link rel="stylesheet" href="src/styles/administration/admin.css">
+    <link rel="stylesheet" href="src/styles/administration/dashboard-header.css">
+    <link rel="stylesheet" href="src/styles/administration/dashboard-overview.css">
+    <link rel="stylesheet" href="src/styles/administration/tables.css">
+    <link rel="stylesheet" href="src/styles/administration/modals.css">
+    <link rel="stylesheet" href="src/styles/administration/notifications.css">
+    <link rel="stylesheet" href="src/styles/administration/modules.css">
+</head>
+
+<body data-theme="dark">
+    <!-- Login Section -->
+    <section class="login-section" id="loginSection">
+        <div class="login-layout">
+            <!-- Formulario de Login -->
+            <div class="login-form-container">
+                <!-- Logo -->
+                <div class="login-brand">
+                    <div class="brand-logo">SA</div>
+                    <div class="brand-text">Sabores Ancestrales</div>
+                </div>
+
+                <!-- Contenido del formulario -->
+                <div class="login-content">
+                    <div class="login-header">
+                        <h1 class="login-title">Panel de Administración</h1>
+                        <p class="login-subtitle">Accede a tu cuenta para gestionar el contenido</p>
+                    </div>
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Primer Nombre</label>
+                            <div class="input-texticon">
+                                <i class="bi bi-person-fill input-icon"></i>
+                                <input type="text" id="username" class="form-input" maxlength="50"
+                                    placeholder="Ingresa tu primer nombre" required>
+                            </div>
+                            <div class="input-counter">
+                                <span id="usernameCounter">0</span>/50
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Cédula</label>
+                            <div class="input-texticon">
+                                <i class="bi bi-card-text input-icon"></i>
+                                <input type="text" id="password" class="form-input" maxlength="10"
+                                    placeholder="Ingresa tu número de cédula" required>
+                            </div>
+                            <div class="input-counter">
+                                <span id="passwordCounter">0</span>/10
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="rememberMe" class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">Recordar sesión</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                    <div class="login-footer">
+                        <p><a href="index.html" class="link">← Volver a la página principal</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen de pantalla completa -->
+            <div class="login-image-container">
+                <div class="image-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1080&fit=crop"
+                    alt="Chef preparando plato gourmet" class="login-image">
+                <div class="image-credits">
+                    <p class="image-title">Cocina Profesional</p>
+                    <p class="image-author">Foto por <a href="https://unsplash.com/@brookelark" target="_blank"
+                            rel="noopener noreferrer">Brooke Lark</a> en <a href="https://unsplash.com" target="_blank"
+                            rel="noopener noreferrer">Unsplash</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-dashboard" id="adminDashboard" style="display: none;">
+        <!-- Nuevo Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="brand-section">
+                    <div class="brand-logo">SA</div>
+                    <div class="brand-info">
+                        <h1 class="brand-title">Sabores Ancestrales</h1>
+                        <p class="brand-subtitle">Panel de Administración</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <nav class="dashboard-nav">
+                    <button class="nav-item active" data-section="dashboard">
+                        <i class="bi bi-house-fill"></i>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-item" data-section="services">
+                        <i class="bi bi-cup-hot-fill"></i>
+                        <span>Servicios</span>
+                    </button>
+                    <button class="nav-item" data-section="tips">
+                        <i class="bi bi-lightbulb-fill"></i>
+                        <span>Tips</span>
+                    </button>
+                    <button class="nav-item" data-section="gallery">
+                        <i class="bi bi-images"></i>
+                        <span>Galería</span>
+                    </button>
+                    <button class="nav-item" data-section="messages">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Mensajes</span>
+                    </button>
+                    <button class="nav-item" data-section="stats">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Estadísticas</span>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="user-section">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <div class="user-details">
+                            <span class="user-name" id="userName">Administrador</span>
+                            <span class="user-role" id="userRole">Admin</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button class="action-btn" id="notificationsBtn" title="Notificaciones">
+                            <i class="bi bi-bell-fill"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <button class="action-btn" id="profileBtn" title="Perfil">
+                            <i class="bi bi-gear-fill"></i>
+                        </button>
+                        <button class="logout-btn" id="logoutBtn" title="Cerrar Sesión">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <span>Cerrar Sesión</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <!-- Sección de Dashboard Principal -->
+            <section class="admin-section" id="dashboardSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-house-fill section-icon"></i>
+                        <h2>Dashboard Principal</h2>
+                    </div>
+                    <p class="section-description">Resumen general del sistema y estadísticas principales</p>
+                </div>
+                <div class="section-content">
+                    <div class="dashboard-overview">
+                        <div class="overview-cards">
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="bi bi-cup-hot-fill"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Servicios Activos</h3>
+                                    <p class="card-value" id="servicesCount">0</p>
+                                    <p class="card-description">Servicios disponibles</p>
+                                </div>
+                            </div>
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Tips de Cocina</h3>
+                                    <p class="card-value" id="tipsCount">0</p>
+                                    <p class="card-description">Consejos publicados</p>
+                                </div>
+                            </div>
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="bi bi-images"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Imágenes en Galería</h3>
+                                    <p class="card-value" id="galleryCount">0</p>
+                                    <p class="card-description">Fotos disponibles</p>
+                                </div>
+                            </div>
+                            <div class="overview-card">
+                                <div class="card-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Mensajes Nuevos</h3>
+                                    <p class="card-value" id="messagesCount">0</p>
+                                    <p class="card-description">Pendientes de revisar</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-actions">
+                            <h3>Acciones Rápidas</h3>
+                            <div class="action-buttons">
+                                <button class="btn btn-primary" data-action="add_service">
+                                    <i class="bi bi-plus-circle"></i>
+                                    Añadir Servicio
+                                </button>
+                                <button class="btn btn-primary" data-action="add_tip">
+                                    <i class="bi bi-lightbulb"></i>
+                                    Crear Tip
+                                </button>
+                                <button class="btn btn-secondary" data-action="upload_images">
+                                    <i class="bi bi-upload"></i>
+                                    Subir Imágenes
+                                </button>
+                                <button class="btn btn-secondary" data-action="view_messages">
+                                    <i class="bi bi-envelope"></i>
+                                    Ver Mensajes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Servicios -->
+            <section class="admin-section" id="servicesSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-cup-hot-fill section-icon"></i>
+                        <h2>Gestión de Servicios</h2>
+                    </div>
+                    <p class="section-description">Administra los servicios ofrecidos por la empresa</p>
+                </div>
+                <div class="section-content">
+                    <div class="section-actions">
+                        <button class="btn btn-primary" data-action="add_service">
+                            <i class="bi bi-plus-circle"></i>
+                            Añadir Servicio
+                        </button>
+                        <button class="btn btn-secondary" data-action="export_services">
+                            <i class="bi bi-download"></i>
+                            Exportar
+                        </button>
+                    </div>
+
+                    <!-- Filtros y búsqueda -->
+                    <div class="table-filters">
+                        <div class="search-box">
+                            <div class="input-texticon">
+                                <i class="bi bi-search input-icon"></i>
+                                <input type="text" id="serviceSearch" class="form-input"
+                                    placeholder="Buscar servicios..." maxlength="100">
+                            </div>
+                        </div>
+
+                        <div class="filter-controls">
+                            <select id="categoryFilter" class="select-input">
+                                <option value="">Todas las categorías</option>
+                            </select>
+
+                            <select id="statusFilter" class="select-input">
+                                <option value="">Todos los estados</option>
+                                <option value="active">Activos</option>
+                                <option value="inactive">Inactivos</option>
+                            </select>
+
+                            <select id="featuredFilter" class="select-input">
+                                <option value="">Todos los servicios</option>
+                                <option value="featured">Solo destacados</option>
+                                <option value="not-featured">No destacados</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button class="btn btn-sm btn-secondary" id="clearFilters">
+                                <i class="bi bi-x-circle"></i>
+                                Limpiar Filtros
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="section-data">
+                        <div class="data-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Información</th>
+                                        <th>Badge</th>
+                                        <th>Categoría</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="servicesTableBody">
+                                    <!-- Los datos se cargarán dinámicamente -->
+                                </tbody>
+                            </table>
+                            <div class="table-pagination" id="servicesPagination">
+                                <div class="pagination-info">
+                                    <span class="pagination-text">Mostrando <span class="pagination-start">1</span> a
+                                        <span class="pagination-end">10</span> de <span
+                                            class="pagination-total">0</span> servicios</span>
+                                </div>
+                                <div class="pagination-controls">
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="first"
+                                        disabled>
+                                        <i class="bi bi-chevron-double-left"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="prev" disabled>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+                                    <div class="pagination-pages" id="servicesPaginationPages">
+                                        <!-- Los números de página se generarán dinámicamente -->
+                                    </div>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="next" disabled>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="last" disabled>
+                                        <i class="bi bi-chevron-double-right"></i>
+                                    </button>
+                                </div>
+                                <div class="pagination-size">
+                                    <select class="select-input pagination-size-select" id="servicesPageSize">
+                                        <option value="5">5 por página</option>
+                                        <option value="10" selected>10 por página</option>
+                                        <option value="20">20 por página</option>
+                                        <option value="50">50 por página</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Tips -->
+            <section class="admin-section" id="tipsSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-lightbulb-fill section-icon"></i>
+                        <h2>Gestión de Tips</h2>
+                    </div>
+                    <p class="section-description">Gestiona los tips de cocina y consejos</p>
+                </div>
+                <div class="section-content">
+                    <div class="section-actions">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i>
+                            Añadir Tip
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-pencil"></i>
+                            Editar Tips
+                        </button>
+                    </div>
+                    <div class="section-data">
+                        <div class="data-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Descripción</th>
+                                        <th>Categoría</th>
+                                        <th>Dificultad</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tipsTableBody">
+                                    <!-- Los datos se cargarán dinámicamente -->
+                                </tbody>
+                            </table>
+                            <div class="table-pagination" id="tipsPagination">
+                                <div class="pagination-info">
+                                    <span class="pagination-text">Mostrando <span class="pagination-start">1</span> a
+                                        <span class="pagination-end">10</span> de <span
+                                            class="pagination-total">0</span> tips</span>
+                                </div>
+                                <div class="pagination-controls">
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="first"
+                                        disabled>
+                                        <i class="bi bi-chevron-double-left"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="prev" disabled>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+                                    <div class="pagination-pages" id="tipsPaginationPages">
+                                        <!-- Los números de página se generarán dinámicamente -->
+                                    </div>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="next" disabled>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-secondary pagination-btn" data-action="last" disabled>
+                                        <i class="bi bi-chevron-double-right"></i>
+                                    </button>
+                                </div>
+                                <div class="pagination-size">
+                                    <select class="select-input pagination-size-select" id="tipsPageSize">
+                                        <option value="5">5 por página</option>
+                                        <option value="10" selected>10 por página</option>
+                                        <option value="20">20 por página</option>
+                                        <option value="50">50 por página</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Galería -->
+            <section class="admin-section" id="gallerySection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-images section-icon"></i>
+                        <h2>Gestión de Galería</h2>
+                    </div>
+                    <p class="section-description">Administra las imágenes de la galería</p>
+                </div>
+                <div class="section-content">
+                    <div class="section-actions">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-upload"></i>
+                            Subir Imágenes
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-folder"></i>
+                            Organizar
+                        </button>
+                    </div>
+                    <div class="section-data">
+                        <div class="gallery-grid" id="galleryGrid">
+                            <!-- Las imágenes se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Mensajes -->
+            <section class="admin-section" id="messagesSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-envelope-fill section-icon"></i>
+                        <h2>Mensajes de Contacto</h2>
+                    </div>
+                    <p class="section-description">Revisa y responde los mensajes recibidos</p>
+                </div>
+                <div class="section-content">
+                    <div class="section-actions">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-eye"></i>
+                            Ver Todos
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-check-circle"></i>
+                            Marcar Leídos
+                        </button>
+                    </div>
+                    <div class="section-data">
+                        <div class="messages-list" id="messagesList">
+                            <!-- Los mensajes se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Estadísticas -->
+            <section class="admin-section" id="statsSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-graph-up section-icon"></i>
+                        <h2>Estadísticas</h2>
+                    </div>
+                    <p class="section-description">Visualiza las estadísticas del sitio web</p>
+                </div>
+                <div class="section-content">
+                    <div class="stats-grid">
+                        <div class="stat-card" data-stat="total_services">
+                            <div class="stat-header">
+                                <div class="stat-value">24</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    <span>+12%</span>
+                                </div>
+                            </div>
+                            <div class="stat-label">Servicios Activos</div>
+                            <div class="stat-chart">
+                                <div class="chart-bars" id="servicesChart">
+                                    <!-- Las barras se generarán dinámicamente -->
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Ene</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Abr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-stat="total_tips">
+                            <div class="stat-header">
+                                <div class="stat-value">156</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    <span>+8%</span>
+                                </div>
+                            </div>
+                            <div class="stat-label">Tips de Cocina</div>
+                            <div class="stat-chart">
+                                <div class="chart-bars" id="tipsChart">
+                                    <!-- Las barras se generarán dinámicamente -->
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Ene</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Abr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-stat="total_orders">
+                            <div class="stat-header">
+                                <div class="stat-value">342</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    <span>+22%</span>
+                                </div>
+                            </div>
+                            <div class="stat-label">Pedidos Este Mes</div>
+                            <div class="stat-chart">
+                                <div class="chart-bars" id="ordersChart">
+                                    <!-- Las barras se generarán dinámicamente -->
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Ene</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Abr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card" data-stat="revenue">
+                            <div class="stat-header">
+                                <div class="stat-value">$28,450</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    <span>+29%</span>
+                                </div>
+                            </div>
+                            <div class="stat-label">Ingresos (MXN)</div>
+                            <div class="stat-chart">
+                                <div class="chart-bars" id="revenueChart">
+                                    <!-- Las barras se generarán dinámicamente -->
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Ene</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Abr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Configuración -->
+            <section class="admin-section" id="configSection">
+                <div class="section-header">
+                    <div class="section-title">
+                        <i class="bi bi-gear-fill section-icon"></i>
+                        <h2>Configuración</h2>
+                    </div>
+                    <p class="section-description">Configura los ajustes del sistema</p>
+                </div>
+                <div class="section-content">
+                    <div class="config-options">
+                        <div class="config-group">
+                            <h3>Configuración General</h3>
+                            <div class="config-item">
+                                <label>Nombre de la Empresa</label>
+                                <input type="text" value="Sabores Ancestrales" class="config-input">
+                            </div>
+                            <div class="config-item">
+                                <label>Email de Contacto</label>
+                                <input type="email" value="contacto@saboresancestrales.com" class="config-input">
+                            </div>
+                        </div>
+                        <div class="config-group">
+                            <h3>Configuración de Tema</h3>
+                            <div class="config-item">
+                                <label>Tema de Administración</label>
+                                <select class="select-input">
+                                    <option value="dark" selected>Oscuro</option>
+                                    <option value="light">Claro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="src/js/database/DatabaseManager.js"></script>
+    <script src="src/js/controllers/AuthController.js"></script>
+    <script src="src/js/admin.js"></script>
+</body>
+
+</html>

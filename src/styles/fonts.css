@@ -1,0 +1,195 @@
+/* ========================================
+   FUENTES GEIST LOCALES - SABORES ANCESTRALES
+   ======================================== */
+
+/* Geist Sans - Variable Font */
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Geist Sans - Italic Variable Font */
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Italic[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Geist Sans - Individual weights for better browser support */
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Sans';
+    src: url('../fonts/Geist/sans/Geist-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Geist Mono - Variable Font */
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Geist Mono - Italic Variable Font */
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Italic[wght].woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Geist Mono - Individual weights for better browser support */
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../fonts/Geist/mono/GeistMono-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Aplicar fuentes por defecto */
+body {
+    font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+code,
+pre {
+    font-family: 'Geist Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}

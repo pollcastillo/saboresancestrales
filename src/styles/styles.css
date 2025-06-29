@@ -1,0 +1,15 @@
+/* Importar fuentes locales */
+@import 'fonts.css';
+
+/* Importar estilos de componentes */
+@import 'base.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'services.css';
+@import 'tips.css';
+@import 'gallery.css';
+@import 'contact.css';
+@import 'footer.css';
+@import 'buttons.css';
+@import 'forms.css';
+@import 'theme.css';

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores Ancestrales - Catering Empresarial</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/regular/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/bold/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/duotone/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/fill/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/light/style.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/thin/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="src/images/light_logo.svg" alt="Sabores Ancestrales" class="logo-image light-logo">
+                    <img src="src/images/dark_logo.svg" alt="Sabores Ancestrales" class="logo-image dark-logo">
+                    <span class="logo-text">Sabores Ancestrales</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="#tips" class="nav-link">Tips</a></li>
+                        <li><a href="#galeria" class="nav-link">Galería</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="ph-fill ph-sun theme-icon light"></i>
+                        <i class="ph-fill ph-moon theme-icon dark"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Catering Empresarial con Sabor Familiar</h2>
+                    <p class="hero-description">Llevamos la tradición culinaria a tu empresa con la mejor calidad y
+                        atención personalizada. Sabores que conectan generaciones.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">
+                            Solicitar Cotización
+                        </button>
+                        <button class="btn btn-secondary">
+                            Ver Menús
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop"
+                        alt="Platos gourmet de Sabores Ancestrales">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-description">Ofrecemos soluciones completas para eventos empresariales</p>
+            </div>
+            <div class="services-grid">
+                <!-- Los servicios se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips de Cocina Section -->
+    <section class="tips" id="tips">
+        <div class="container">
+            <div class="tips-header">
+                <h2 class="tips-title">Tips de Cocina</h2>
+                <p class="tips-description">Secretos culinarios para elevar tus platos al siguiente nivel</p>
+            </div>
+            <div class="tips-filters">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="conservacion">Conservación</button>
+                <button class="filter-btn" data-category="tecnicas">Técnicas</button>
+                <button class="filter-btn" data-category="sabores">Sabores</button>
+                <button class="filter-btn" data-category="presentacion">Presentación</button>
+                <button class="filter-btn" data-category="seguridad">Seguridad</button>
+                <button class="filter-btn" data-category="organizacion">Organización</button>
+                <button class="filter-btn" data-category="limpieza">Limpieza</button>
+            </div>
+            <div class="tips-grid" id="tipsGrid">
+                <!-- Los tips se cargarán dinámicamente desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galería de Sabores</h2>
+                <p class="section-description">Descubre la calidad y presentación de nuestros platos</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Ensalada Mediterránea</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Pasta Artesanal</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Carne Asada</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 4" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Postres Caseros</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 5" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Cócteles</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?w=400&h=300&fit=crop"
+                        alt="Plato gourmet 6" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Desayunos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-description">Estamos aquí para hacer tu evento inolvidable</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p>+593 4 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@saboresancestrales.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Ubicación</h3>
+                            <p>Guayaquil - Ecuador</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option value="">Seleccionar servicio</option>
+                            <option value="catering">Catering Corporativo</option>
+                            <option value="eventos">Eventos Especiales</option>
+                            <option value="coffee">Coffee Breaks</option>
+                            <option value="saludable">Menús Saludables</option>
+                            <option value="desayunos">Desayunos Ejecutivos</option>
+                            <option value="domicilio">Catering a Domicilio</option>
+                            <option value="limpieza">Servicios de Limpieza</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-textarea" placeholder="Mensaje" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-send"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sabores Ancestrales</h3>
+                    <p class="footer-description">Catering empresarial con tradición familiar</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Servicios</h4>
+                    <ul class="footer-list">
+                        <li><a href="#servicios">Catering Corporativo</a></li>
+                        <li><a href="#servicios">Eventos Especiales</a></li>
+                        <li><a href="#servicios">Coffee Breaks</a></li>
+                        <li><a href="#servicios">Menús Saludables</a></li>
+                        <li><a href="#servicios">Desayunos Ejecutivos</a></li>
+                        <li><a href="#servicios">Catering a Domicilio</a></li>
+                        <li><a href="#servicios">Servicios de Limpieza</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <ul class="footer-list">
+                        <li>+593 4 1234 5678</li>
+                        <li>info@saboresancestrales.com</li>
+                        <li>Guayaquil - Ecuador</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Administración</h4>
+                    <ul class="footer-list">
+                        <li><a href="admin.html" class="footer-link">Panel de Administración</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sabores Ancestrales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/database/DatabaseManager.js"></script>
+    <script src="src/js/database/DataAdapter.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>

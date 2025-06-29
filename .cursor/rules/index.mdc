@@ -1,0 +1,67 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Reglas del Proyecto - Landing Page con Galería
+
+## Estructura del Proyecto
+- Página estática con HTML, CSS y JavaScript
+- Landing page con galería
+
+## Contexto del Proyecto
+- **Nombre**: Sabores Ancestrales
+- **Servicio**: Catering de alimentos para empresas
+- **Enfoque**: Atención familiar y amigable
+- **Valores**: Mejor servicio y calidad de comida
+
+## Reglas Generales
+
+### Sistema de Espaciado - Grilla de 8
+- **Aplicar grilla de 8** en todos los espaciados del proyecto
+- **Valores permitidos**: 8px, 16px, 24px, 32px, 40px, 48px, 56px, 64px, 72px, 80px, 88px, 96px, 104px, 112px, 120px, 128px, 136px, 144px, 152px, 160px
+- **Aplicar en**: márgenes, paddings, bordes, y border-radius
+- **Ejemplos**: `margin: 16px`, `padding: 24px`, `border-radius: 8px`
+
+### Paleta de Colores
+- **Color principal 1**: `#D46528` (naranja/terracota)
+- **Color principal 2**: `#185A48` (verde oscuro)
+- **Variantes**: Cada color tendrá 11 variantes desde las más claras hasta las más oscuras
+
+### Tipografía
+- **Fuente principal**: Geist Sans
+- **Fuente monoespaciada**: Geist Mono
+
+### Responsive Design
+- **Enfoque**: Proyecto responsivo con enfoque en móviles
+- **Desarrollo**: Trabajar en vista desktop pero optimizar para móviles
+- **Asistencia**: Ayuda automática en la parte responsiva durante el desarrollo
+
+### Diseño de Componentes
+- **Enfoque**: Componentes compactos, nada grande
+- **Excepción**: Los títulos sí pueden ser grandes
+- **Estilo**: Interfaz limpia y funcional
+
+### Sistema de Temas
+- **Toggle**: Modo claro y modo oscuro
+- **Fondo modo claro**: Blanco puro
+- **Fondo modo oscuro**: `#191919`
+- **Componentes modo oscuro**: Fondo `#121212`
+- **Implementación**: Todos los componentes deben tener ambos modos de color
+
+### Organización de Estilos
+- **Carpeta de estilos**: `src/styles/`
+- Todos los archivos CSS se guardarán en esta carpeta
+- **Estilos separados por componente**: Cada componente (botón, modal, sección, carrusel, galería, miniatura, tablas, inputs, etc.) tendrá su propio archivo CSS independiente
+- Todos los archivos de estilos de componentes se importarán en `styles.css`
+
+---
+*Este archivo se actualiza automáticamente con las reglas establecidas durante el desarrollo del proyecto.*
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+/* Footer */
+.footer {
+    background-color: var(--color-primary-2);
+    color: white;
+    padding: var(--space-8) 0 var(--space-4);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+/* Sección del footer */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--space-2);
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--space-2);
+}
+
+.footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: var(--space-1);
+}
+
+.footer-list a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: white;
+}
+
+.footer-list li:not(:has(a)) {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Línea inferior del footer */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: var(--space-4);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-content {
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--space-6) 0 var(--space-3);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        text-align: center;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+    .footer-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: var(--space-4) 0 var(--space-2);
+    }
+
+    .footer-content {
+        gap: var(--space-3);
+    }
+
+    .footer-bottom {
+        padding-top: var(--space-3);
+    }
+}
+
+.footer-link {
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-link:hover {
+    color: var(--color-primary-1-600);
+    opacity: 1;
+}

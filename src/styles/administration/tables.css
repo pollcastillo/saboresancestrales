@@ -1,0 +1,1083 @@
+/* ===== ESTILOS PARA TABLAS DE ADMINISTRACIÓN ===== */
+
+/* Contenedor de tabla */
+.data-table {
+    background: var(--color-background-component);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--color-shadow);
+    margin-bottom: 32px;
+}
+
+/* Tabla principal */
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+    table-layout: fixed;
+}
+
+/* Encabezados de tabla */
+.data-table thead th {
+    background: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    text-align: left;
+    padding: 24px 16px;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Definir anchos de columnas específicos para servicios */
+.data-table thead th:nth-child(1) {
+    /* Servicio */
+    width: 25%;
+}
+
+.data-table thead th:nth-child(2) {
+    /* Descripción */
+    width: 35%;
+}
+
+.data-table thead th:nth-child(3) {
+    /* Categoría */
+    width: 15%;
+}
+
+.data-table thead th:nth-child(4) {
+    /* Estado */
+    width: 10%;
+}
+
+.data-table thead th:nth-child(5) {
+    /* Acciones */
+    width: 15%;
+}
+
+/* Definir anchos de columnas específicos para tips */
+#tipsSection .data-table thead th:nth-child(1) {
+    /* Título */
+    width: 20%;
+}
+
+#tipsSection .data-table thead th:nth-child(2) {
+    /* Descripción */
+    width: 40%;
+}
+
+#tipsSection .data-table thead th:nth-child(3) {
+    /* Categoría */
+    width: 15%;
+}
+
+#tipsSection .data-table thead th:nth-child(4) {
+    /* Dificultad */
+    width: 10%;
+}
+
+#tipsSection .data-table thead th:nth-child(5) {
+    /* Acciones */
+    width: 15%;
+}
+
+/* Celdas de tabla */
+.data-table tbody td {
+    padding: 24px 16px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Última fila sin borde */
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover en filas */
+.data-table tbody tr:hover {
+    background: var(--color-background-secondary);
+}
+
+.data-table tbody tr:hover td {
+    border-bottom-color: var(--color-border);
+}
+
+/* Filas alternadas para mejor legibilidad */
+.data-table tbody tr:nth-child(even) {
+    background: var(--color-background-secondary);
+}
+
+.data-table tbody tr:nth-child(even):hover {
+    background: var(--color-background-secondary);
+}
+
+/* Información de servicio */
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    max-width: 100%;
+    align-items: flex-start;
+}
+
+/* Estilos específicos para service-title en tablas - alta especificidad */
+.data-table .service-title,
+.data-table .service-info .service-title,
+.services-table .service-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left !important;
+}
+
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-1);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.service-description {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+/* Etiquetas de categoría */
+.category-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--color-primary-2);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Badges de estado */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.status-badge.active {
+    background: var(--color-success);
+}
+
+.status-badge.inactive {
+    background: var(--color-error);
+}
+
+.status-badge.featured {
+    background: var(--color-accent-5);
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.action-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    height: 32px;
+}
+
+.action-buttons .btn:hover {
+    background: var(--color-primary-1);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.action-buttons .btn.btn-edit {
+    background: var(--color-info);
+    color: white;
+}
+
+.action-buttons .btn.btn-delete {
+    background: var(--color-error);
+    color: white;
+}
+
+.action-buttons .btn.btn-view {
+    background: var(--color-success);
+    color: white;
+}
+
+/* Estado sin datos */
+.no-data {
+    text-align: center;
+    padding: 64px 32px;
+    color: var(--color-text-tertiary);
+}
+
+.no-data-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.no-data-message i {
+    font-size: 48px;
+    opacity: 0.5;
+    color: var(--color-text-tertiary);
+}
+
+.no-data-message p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.no-data-message .no-data-subtitle {
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    margin: 0;
+}
+
+/* Paginación */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+    background: var(--color-background-component);
+    border-top: 1px solid var(--color-border);
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    height: 40px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: var(--color-primary-1);
+    color: white;
+    border-color: var(--color-primary-1);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagination-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    height: 40px;
+}
+
+.pagination-page.active {
+    background: var(--color-primary-1);
+    color: white;
+    border-color: var(--color-primary-1);
+}
+
+.pagination-page:hover:not(.active) {
+    background: var(--color-background-secondary);
+    border-color: var(--color-primary-1);
+}
+
+.pagination-page.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    color: var(--color-text-tertiary);
+    font-size: 14px;
+    min-width: 40px;
+    height: 40px;
+}
+
+.pagination-size {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-size-select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Filtros de tabla */
+.table-filters {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 16px;
+    background: var(--color-background-component);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.search-box {
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-box .input-texticon {
+    position: relative;
+    display: flex;
+}
+
+.search-box .input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-tertiary);
+}
+
+.search-box .form-input {
+    width: 100%;
+    padding: 12px 12px 12px 36px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.search-box .form-input:focus {
+    outline: none;
+    border-color: var(--color-primary-1);
+    box-shadow: 0 0 0 3px rgba(212, 101, 40, 0.1);
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.filter-controls .select-input {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-controls .select-input:focus {
+    outline: none;
+    border-color: var(--color-primary-1);
+}
+
+.filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background-component);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-actions .btn:hover {
+    background: var(--color-primary-1);
+    color: white;
+    border-color: var(--color-primary-1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .data-table {
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+
+    .data-table table {
+        font-size: 12px;
+    }
+
+    .data-table thead th,
+    .data-table tbody td {
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+
+    .data-table thead th:nth-child(1) {
+        width: 30%;
+    }
+
+    .data-table thead th:nth-child(2) {
+        width: 40%;
+    }
+
+    .data-table thead th:nth-child(3) {
+        width: 15%;
+    }
+
+    .data-table thead th:nth-child(4) {
+        width: 15%;
+    }
+
+    .data-table thead th:nth-child(5) {
+        display: none;
+    }
+
+    .table-pagination {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .pagination-controls {
+        order: 1;
+    }
+
+    .pagination-info {
+        order: 2;
+    }
+
+    .pagination-size {
+        order: 3;
+    }
+
+    .pagination-pages {
+        display: none;
+    }
+
+    .pagination-page,
+    .pagination-ellipsis {
+        display: none;
+    }
+
+    .table-filters {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .filter-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .service-info {
+        gap: 4px;
+    }
+
+    .service-description {
+        font-size: 12px;
+    }
+
+    /* Estilos específicos para service-title en responsive */
+    .data-table .service-title,
+    .data-table .service-info .service-title,
+    .services-table .service-title {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-table {
+        border-radius: 8px;
+    }
+
+    .data-table table {
+        font-size: 11px;
+    }
+
+    .data-table thead th,
+    .data-table tbody td {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    .service-info {
+        gap: 2px;
+    }
+
+    .action-buttons {
+        gap: 2px;
+    }
+
+    .action-buttons .btn {
+        padding: 6px;
+        min-width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .status-badge,
+    .category-tag {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+
+    .data-table thead th,
+    .data-table tbody td {
+        font-size: 11px;
+    }
+
+    .data-table thead th:nth-child(1) {
+        width: 35%;
+    }
+
+    .data-table thead th:nth-child(2) {
+        width: 45%;
+    }
+
+    .data-table thead th:nth-child(3) {
+        width: 20%;
+    }
+
+    .data-table thead th:nth-child(4) {
+        display: none;
+    }
+
+    .data-table thead th:nth-child(5) {
+        display: none;
+    }
+
+    /* Estilos específicos para service-title en mobile */
+    .data-table .service-title,
+    .data-table .service-info .service-title,
+    .services-table .service-title {
+        font-size: 11px !important;
+    }
+}
+
+/* Estilos específicos para tablas de servicios */
+.services-table .service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+/* Estilos específicos para service-title en servicios - alta especificidad */
+.services-table .service-title,
+.services-table .service-info .service-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left !important;
+}
+
+.services-table .service-description {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.services-table .service-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-1);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.services-table .no-badge {
+    color: var(--color-text-tertiary);
+    font-style: italic;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .services-table .service-info {
+        gap: 4px;
+    }
+
+    .services-table .service-title,
+    .services-table .service-info .service-title {
+        font-size: 12px !important;
+    }
+
+    .services-table .service-description {
+        font-size: 12px;
+    }
+
+    .services-table .service-badge {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+}
+
+/* Tabla general de administración */
+.admin-table,
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-background-component);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.admin-table::-webkit-scrollbar,
+.data-table::-webkit-scrollbar {
+    height: 8px;
+    background: var(--color-background-secondary);
+}
+
+.table-scroll-container {
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+.table-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.admin-table th {
+    background: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    text-align: left;
+    padding: 24px 16px;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.admin-table td {
+    padding: 24px 16px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tr:hover {
+    background: var(--color-background-secondary);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+    background: var(--color-success);
+}
+
+.status-badge.inactive {
+    background: var(--color-error);
+}
+
+.category-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--color-primary-2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.action-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    height: 32px;
+}
+
+.action-buttons .btn i {
+    font-size: 16px;
+}
+
+/* Estilos específicos para service-title en admin-table - alta especificidad */
+.admin-table .service-title,
+.admin-table .service-info .service-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left !important;
+}
+
+.admin-table .service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.admin-table .service-description {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.admin-table .service-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-1);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.admin-table .no-badge {
+    color: var(--color-text-tertiary);
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Tabla de galería */
+.gallery-table .image-preview {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.gallery-table .image-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.gallery-table .image-category {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Tabla de tips */
+.tips-table .tip-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.tips-table .tip-content {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Tabla de mensajes */
+.messages-table .message-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.messages-table .message-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+.messages-table .message-email {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+.messages-table .message-subject {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.messages-table .message-preview {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Responsive para tablas generales */
+@media (max-width: 768px) {
+    .admin-table {
+        font-size: 12px;
+    }
+
+    .admin-table th {
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+
+    .admin-table td {
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+
+    .admin-table .service-info {
+        gap: 4px;
+    }
+
+    .admin-table .service-title,
+    .admin-table .service-info .service-title {
+        font-size: 12px !important;
+    }
+
+    .admin-table .service-description {
+        font-size: 12px;
+    }
+
+    .action-buttons .btn {
+        padding: 6px;
+        min-width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .action-buttons .btn i {
+        font-size: 14px;
+    }
+}

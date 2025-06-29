@@ -1,0 +1,211 @@
+/* Dashboard Overview Styles */
+
+.dashboard-overview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-spacing-xl);
+}
+
+/* Overview Cards */
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--admin-spacing-lg);
+}
+
+.overview-card {
+    background: var(--admin-bg-card);
+    border: 1px solid var(--admin-border-primary);
+    border-radius: var(--admin-border-radius-xl);
+    padding: var(--admin-spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--admin-spacing-md);
+    transition: all 0.3s ease;
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.overview-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--admin-shadow-md);
+    border-color: var(--admin-primary);
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-secondary));
+    border-radius: var(--admin-border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-spacing-sm);
+}
+
+.card-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--admin-text-primary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--admin-primary);
+    margin: 0;
+    line-height: 1;
+    font-family: var(--font-mono);
+}
+
+.card-description {
+    font-size: 14px;
+    color: var(--admin-text-secondary);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Dashboard Actions */
+.dashboard-actions {
+    background: var(--admin-bg-card);
+    border: 1px solid var(--admin-border-primary);
+    border-radius: var(--admin-border-radius-xl);
+    padding: var(--admin-spacing-lg);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.dashboard-actions h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--admin-text-primary);
+    margin: 0 0 var(--admin-spacing-md) 0;
+    line-height: 1.2;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--admin-spacing-md);
+}
+
+.action-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--admin-spacing-sm);
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--admin-border-radius-md);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.action-buttons .btn i {
+    font-size: 16px;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--admin-shadow-md);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .overview-cards {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .overview-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .card-value {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-overview {
+        gap: 24px;
+    }
+
+    .overview-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .overview-card {
+        padding: 16px;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .card-value {
+        font-size: 24px;
+    }
+
+    .card-content h3 {
+        font-size: 14px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .action-buttons .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .dashboard-actions {
+        padding: 16px;
+    }
+
+    .dashboard-actions h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}

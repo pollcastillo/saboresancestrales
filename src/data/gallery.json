@@ -1,0 +1,93 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "title": "Plato Principal",
+            "description": "Nuestro plato estrella con ingredientes frescos",
+            "filename": "plato-principal.jpg",
+            "url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+            "category": "platos",
+            "active": true,
+            "featured": true,
+            "order": 1,
+            "alt": "Plato principal con ingredientes frescos",
+            "tags": [
+                "plato",
+                "principal",
+                "fresco"
+            ],
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 2,
+            "title": "Evento Corporativo",
+            "description": "Catering para eventos empresariales",
+            "filename": "evento-corporativo.jpg",
+            "url": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+            "category": "eventos",
+            "active": true,
+            "featured": true,
+            "order": 2,
+            "alt": "Evento corporativo con catering",
+            "tags": [
+                "evento",
+                "corporativo",
+                "catering"
+            ],
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        },
+        {
+            "id": 3,
+            "title": "Postre Artesanal",
+            "description": "Postres caseros con toque especial",
+            "filename": "postre-artesanal.jpg",
+            "url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+            "category": "postres",
+            "active": true,
+            "featured": false,
+            "order": 3,
+            "alt": "Postre artesanal casero",
+            "tags": [
+                "postre",
+                "artesanal",
+                "casero"
+            ],
+            "createdAt": "2024-01-01T00:00:00.000Z",
+            "updatedAt": "2024-01-01T00:00:00.000Z"
+        }
+    ],
+    "categories": [
+        {
+            "id": "platos",
+            "name": "Platos Principales",
+            "color": "#D46528"
+        },
+        {
+            "id": "eventos",
+            "name": "Eventos",
+            "color": "#185A48"
+        },
+        {
+            "id": "postres",
+            "name": "Postres",
+            "color": "#8B4513"
+        },
+        {
+            "id": "bebidas",
+            "name": "Bebidas",
+            "color": "#4169E1"
+        },
+        {
+            "id": "decoracion",
+            "name": "Decoración",
+            "color": "#FF69B4"
+        },
+        {
+            "id": "equipamiento",
+            "name": "Equipamiento",
+            "color": "#808080"
+        }
+    ]
+}
