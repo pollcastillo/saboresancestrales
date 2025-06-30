@@ -55,6 +55,90 @@ alwaysApply: true
 - **Estilos separados por componente**: Cada componente (botón, modal, sección, carrusel, galería, miniatura, tablas, inputs, etc.) tendrá su propio archivo CSS independiente
 - Todos los archivos de estilos de componentes se importarán en `styles.css`
 
+### Iconografía en Tips de Cocina
+- **Tips sobre carnes**: Usar iconos de animales específicos en lugar de iconos genéricos de carne
+- **Refrigeración**: Usar `ph-fill ph-snowflake` para todo lo relacionado con refrigeración, congelación y almacenamiento en frío
+- **Aves**: Usar `ph-fill ph-feather` o `ph-fill ph-bird` para pollo, gallina, gallo y otras aves
+- **Lácteos**: Usar `ph-fill ph-jar` para productos lácteos (queso, leche, yogurt)
+- **Baterías de cocina**: Usar `ph-fill ph-cooking-pot` para ollas y baterías de cocina
+- **Limpieza**: Usar `ph-fill ph-spray-bottle` para todo lo relacionado con limpieza y mantenimiento
+- **Cuchillos**: Usar `ph-fill ph-knife` cuando se refiera específicamente a cuchillos
+- **Hornos**: Usar `ph-fill ph-oven` para todo lo relacionado con hornos
+- **Humedad**: Usar `ph-fill ph-drop` para todo lo relacionado con humedad y control de humedad
+- **Bebidas**: Usar `ph-fill ph-wine` para bebidas alcohólicas y carbonatadas
+- **Técnicas de corte**: Usar `ph-fill ph-knife` para técnicas de corte y tipos de corte
+- **Ejemplos**: `ph-fill ph-cow` para res, `ph-fill ph-feather` para aves, `ph-fill ph-fish` para pescado, `ph-fill ph-snowflake` para refrigeración, `ph-fill ph-jar` para lácteos, `ph-fill ph-spray-bottle` para limpieza, `ph-fill ph-knife` para cuchillos, `ph-fill ph-oven` para hornos, `ph-fill ph-drop` para humedad, `ph-fill ph-wine` para bebidas, `ph-fill ph-knife` para técnicas de corte
+- **Aplicar**: Solo en tips de cocina (limpieza, mantenimiento, organización) relacionados con el cuidado de carnes y refrigeración
+
+### Sistema de Grids de Tips
+
+#### Grid de 3 Columnas (tips-grid-3)
+**Clase**: `.tips-grid.tips-grid-3`
+
+**Propósito**: Grid responsivo que muestra máximo 3 columnas en desktop, adaptándose automáticamente cuando hay menos elementos para ocupar el ancho completo.
+
+**Propiedades CSS explicadas**:
+- `display: grid` - Define el contenedor como grid
+- `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))` - Crea columnas que se ajustan automáticamente con mínimo 320px de ancho
+- `gap: 32px` - Espaciado entre elementos (siguiendo grilla de 8)
+- `width: 100%` - Ocupa todo el ancho disponible
+- `max-width: 1400px` - Límite máximo de ancho para mantener proporciones
+- `margin: 0 auto` - Centra el grid horizontalmente
+- `padding: 0 16px` - Padding lateral para evitar que toque los bordes
+
+**Comportamiento responsivo**:
+- **Desktop**: `repeat(auto-fit, minmax(320px, 1fr))` - Máximo 3 columnas, mínimo 320px cada una
+- **Tablet (≤1024px)**: `repeat(auto-fit, minmax(250px, 1fr))` - Máximo 2 columnas, mínimo 250px cada una
+- **Móvil (≤768px)**: `1fr` - Una sola columna que ocupa todo el ancho
+
+**Uso en HTML**:
+```html
+<div class="tips-grid tips-grid-3" id="tipsGrid">
+    <!-- Las tarjetas de tips se cargan dinámicamente -->
+</div>
+```
+
+#### Grid de 4 Columnas (tips-grid-4)
+**Clase**: `.tips-grid.tips-grid-4`
+
+**Propósito**: Grid responsivo que muestra máximo 4 columnas en desktop, ideal para páginas dedicadas de tips.
+
+**Propiedades CSS explicadas**:
+- `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))` - Columnas más pequeñas para acomodar 4
+- `max-width: 1800px` - Contenedor más ancho para 4 columnas
+- Resto de propiedades iguales a tips-grid-3
+
+**Comportamiento responsivo**:
+- **Desktop**: `repeat(auto-fit, minmax(280px, 1fr))` - Máximo 4 columnas
+- **Tablet (≤1024px)**: `repeat(auto-fit, minmax(250px, 1fr))` - Máximo 3 columnas
+- **Móvil (≤768px)**: `1fr` - Una sola columna
+
+#### ¿Qué SÍ se debe hacer?
+✅ Usar `repeat(auto-fit, minmax(Xpx, 1fr))` para grids responsivos
+✅ Aplicar la clase `.tips-grid` como base y la variante específica (`.tips-grid-3` o `.tips-grid-4`)
+✅ Usar `width: 100%` en las tarjetas para que ocupen todo el espacio disponible
+✅ Seguir la grilla de 8 para gaps (32px desktop, 24px tablet/móvil)
+✅ Usar `max-width` para limitar el ancho y mantener proporciones
+
+#### ¿Qué NO se debe hacer?
+❌ Usar `repeat(3, 1fr)` o `repeat(4, 1fr)` - Esto crea columnas vacías si hay menos elementos
+❌ Olvidar la clase base `.tips-grid` - Siempre debe ir antes de la variante específica
+❌ Usar `margin-bottom` o `margin-top` - Solo usar `gap` para separación
+❌ Definir múltiples versiones de la misma clase - Causa conflictos de especificidad
+
+#### Solución a errores comunes
+**Problema**: Grid no ocupa ancho completo cuando hay menos elementos
+**Causa**: Uso de `repeat(3, 1fr)` en lugar de `repeat(auto-fit, minmax(Xpx, 1fr))`
+**Solución**: Cambiar a `auto-fit` con `minmax` para que las tarjetas se expandan automáticamente
+
+**Problema**: Grid muestra 4 columnas cuando debería mostrar 3
+**Causa**: Conflicto de especificidad entre `.tips-grid` y `.tips-grid-3`
+**Solución**: Usar `.tips-grid.tips-grid-3` para mayor especificidad
+
+**Problema**: Grid no es responsivo
+**Causa**: Falta de media queries o definiciones incorrectas
+**Solución**: Asegurar que cada breakpoint tenga su propia definición de `grid-template-columns`
+
 ---
 *Este archivo se actualiza automáticamente con las reglas establecidas durante el desarrollo del proyecto.*
 
