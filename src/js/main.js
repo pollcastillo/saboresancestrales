@@ -1,47 +1,32 @@
 // Funcionalidad principal de Sabores Ancestrales
 
-// Variables globales para la base de datos
-let databaseManager = null;
-let dataAdapter = null;
-
-document.addEventListener('DOMContentLoaded', async function () {
-    // Inicializar base de datos
-    await initDatabase();
-
-    // Inicializar funcionalidades
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicializar funcionalidades básicas
     initThemeToggle();
     initMobileMenu();
     initSmoothScrolling();
     initFormValidation();
     initGalleryModal();
     initAnimations();
-    initCookingTips();
-    initServices();
-});
 
-// Inicializar base de datos SQL.js
-async function initDatabase() {
-    try {
-        console.log('🔄 Inicializando base de datos SQL.js...');
+    // Inicializar funcionalidades específicas según la página
+    const currentPage = window.location.pathname;
 
-        // Crear instancia del gestor de base de datos
-        databaseManager = new DatabaseManager();
-
-        // Inicializar la base de datos
-        await databaseManager.initialize();
-
-        // Crear adaptador para compatibilidad
-        dataAdapter = new DataAdapter(databaseManager);
-
-        console.log('✅ Base de datos inicializada correctamente');
-
-    } catch (error) {
-        console.error('❌ Error al inicializar la base de datos:', error);
-
-        // Fallback a archivos JSON si la base de datos falla
-        console.log('🔄 Usando fallback a archivos JSON...');
+    if (currentPage.includes('tips-culinarios.html')) {
+        // Solo cargar tips culinarios
+        initCulinaryTips();
+    } else if (currentPage.includes('tips-cocina.html')) {
+        // Solo cargar tips de cocina
+        initKitchenTips();
+    } else if (currentPage.includes('index.html') || currentPage === '/' || currentPage === '') {
+        // Página principal - cargar todo
+        initIndexTips();
+        initServices();
+    } else {
+        // Otras páginas - cargar servicios si existen
+        initServices();
     }
-}
+});
 
 // Sistema de temas
 function initThemeToggle() {
@@ -110,7 +95,7 @@ function initFormValidation() {
     const contactForm = document.querySelector('.contact-form');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Validación básica
@@ -127,24 +112,6 @@ function initFormValidation() {
             });
 
             if (isValid) {
-                // Guardar mensaje en la base de datos si está disponible
-                if (dataAdapter && dataAdapter.isReady()) {
-                    try {
-                        const formData = new FormData(this);
-                        const message = {
-                            name: formData.get('name') || this.querySelector('[name="name"]').value,
-                            email: formData.get('email') || this.querySelector('[name="email"]').value,
-                            phone: formData.get('phone') || this.querySelector('[name="phone"]')?.value,
-                            message: formData.get('message') || this.querySelector('[name="message"]').value
-                        };
-
-                        await dataAdapter.insertMessage(message);
-                        console.log('✅ Mensaje guardado en la base de datos');
-                    } catch (error) {
-                        console.error('❌ Error al guardar mensaje:', error);
-                    }
-                }
-
                 // Simular envío
                 const submitBtn = this.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
@@ -199,8 +166,32 @@ function initGalleryModal() {
     });
 }
 
-// Animaciones al hacer scroll
+// Animaciones
 function initAnimations() {
+    // Animación del header al hacer scroll
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Ocultar/mostrar header al hacer scroll
+        if (scrollTop > lastScrollTop && scrollTop > 200) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
+    // Animaciones de entrada para elementos
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -209,65 +200,27 @@ function initAnimations() {
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
             }
         });
     }, observerOptions);
 
     // Observar elementos para animación
-    const animatedElements = document.querySelectorAll('.service-card, .gallery-item, .contact-item');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-        observer.observe(el);
-    });
-}
+    const animateElements = document.querySelectorAll('.service-card, .tip-card, .gallery-item');
+    animateElements.forEach(el => observer.observe(el));
 
-// Header con scroll
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header');
-    const scrollTop = window.pageYOffset;
-    const theme = document.body.getAttribute('data-theme');
-
-    if (scrollTop > 100) {
-        header.classList.add('scrolled');
-        if (theme === 'dark') {
-            header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
-            header.style.borderBottomColor = 'rgba(31, 34, 37, 0.8)';
-        } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.borderBottomColor = 'rgba(225, 225, 225, 0.8)';
-        }
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.classList.remove('scrolled');
-        header.style.backgroundColor = '';
-        header.style.backdropFilter = '';
-        header.style.borderBottomColor = '';
-    }
-});
-
-// Modo oscuro para header
-document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.header');
-
-    // Observar cambios en el tema
-    const observer = new MutationObserver(function (mutations) {
+    // Cambiar colores del header según el tema
+    const themeObserver = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-                const theme = document.body.getAttribute('data-theme');
-                const scrollTop = window.pageYOffset;
+                const currentTheme = document.body.getAttribute('data-theme');
 
-                if (scrollTop > 100) {
-                    if (theme === 'dark') {
-                        header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
-                        header.style.borderBottomColor = 'rgba(31, 34, 37, 0.8)';
-                    } else {
-                        header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                        header.style.borderBottomColor = 'rgba(225, 225, 225, 0.8)';
-                    }
+                if (currentTheme === 'dark') {
+                    header.style.backgroundColor = 'rgba(25, 25, 25, 0.95)';
+                    header.style.borderBottomColor = 'rgba(31, 34, 37, 0.8)';
+                } else {
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    header.style.borderBottomColor = 'rgba(225, 225, 225, 0.8)';
                 }
             }
         });
@@ -277,102 +230,180 @@ document.addEventListener('DOMContentLoaded', function () {
         attributes: true,
         attributeFilter: ['data-theme']
     });
-});
+}
 
 // Tips de Cocina
 async function initCookingTips() {
-    const tipsGrid = document.getElementById('tipsGrid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // Cargar tips específicos para el index
+    await initIndexTips();
+}
+
+// Tips para el Index (6 de cada sección)
+async function initIndexTips() {
+    const culinaryTipsGrid = document.getElementById('culinaryTipsGrid');
+    const kitchenTipsGrid = document.getElementById('kitchenTipsGrid');
+
+    if (!culinaryTipsGrid || !kitchenTipsGrid) {
+        console.error('❌ No se encontraron los elementos de tips del index');
+        return;
+    }
+
+    try {
+        // Cargar desde el archivo específico del index
+        const response = await fetch('src/data/index-tips.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const culinaryTips = data.culinary_tips || [];
+        const kitchenTips = data.kitchen_tips || [];
+        const culinaryCategories = data.culinary_categories || [];
+        const kitchenCategories = data.kitchen_categories || [];
+
+        console.log('✅ Tips del index cargados desde JSON');
+
+        // Renderizar tips culinarios y configurar filtros
+        renderTips(culinaryTipsGrid, culinaryTips, culinaryCategories);
+        setupFilters('#tips-culinarios', culinaryTips, culinaryCategories);
+
+        // Renderizar tips de cocina y configurar filtros
+        renderTips(kitchenTipsGrid, kitchenTips, kitchenCategories);
+        setupFilters('#tips-cocina', kitchenTips, kitchenCategories);
+
+    } catch (error) {
+        console.error('❌ Error cargando tips del index:', error);
+        if (culinaryTipsGrid) {
+            culinaryTipsGrid.innerHTML = '<div class="tips-error">Error al cargar los tips culinarios</div>';
+        }
+        if (kitchenTipsGrid) {
+            kitchenTipsGrid.innerHTML = '<div class="tips-error">Error al cargar los tips de cocina</div>';
+        }
+    }
+}
+
+// Tips Culinarios
+async function initCulinaryTips() {
+    const tipsGrid = document.getElementById('culinaryTipsGrid');
+
+    if (!tipsGrid) {
+        console.error('❌ No se encontró el elemento culinaryTipsGrid');
+        return;
+    }
+
     let allTips = [];
     let categories = [];
 
     try {
-        // Intentar cargar desde la base de datos
-        if (dataAdapter && dataAdapter.isReady()) {
-            const data = await dataAdapter.getCookingTips();
-            allTips = data.tips;
-            categories = data.categories;
-            console.log('✅ Tips cargados desde SQL.js');
-        } else {
-            // Fallback a archivos JSON
-            const response = await fetch('src/data/cooking-tips.json');
-            const data = await response.json();
-            allTips = data.tips;
-            categories = data.categories;
-            console.log('✅ Tips cargados desde JSON (fallback)');
+        // Cargar desde archivos JSON
+        const response = await fetch('src/data/cooking-tips.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        renderTips(allTips);
-        setupFilters();
+        const data = await response.json();
+        allTips = data.culinary_tips || [];
+        categories = data.culinary_categories || [];
+
+        renderTips(tipsGrid, allTips, categories);
+        setupFilters('#tips-culinarios', allTips, categories);
 
     } catch (error) {
-        console.error('❌ Error cargando tips:', error);
+        console.error('❌ Error cargando tips culinarios:', error);
+        tipsGrid.innerHTML = '<div class="tips-error">Error al cargar los tips culinarios: ' + error.message + '</div>';
+    }
+}
+
+// Tips de Cocina
+async function initKitchenTips() {
+    const tipsGrid = document.getElementById('kitchenTipsGrid');
+    let allTips = [];
+    let categories = [];
+
+    try {
+        // Cargar desde archivos JSON
+        const response = await fetch('src/data/cooking-tips.json');
+        const data = await response.json();
+        allTips = data.kitchen_tips || [];
+        categories = data.kitchen_categories || [];
+        console.log('✅ Tips de cocina cargados desde JSON');
+
+        renderTips(tipsGrid, allTips, categories);
+        setupFilters('#tips-cocina', allTips, categories);
+
+    } catch (error) {
+        console.error('❌ Error cargando tips de cocina:', error);
         tipsGrid.innerHTML = '<div class="tips-error">Error al cargar los tips de cocina</div>';
     }
+}
 
-    function renderTips(tips) {
-        tipsGrid.innerHTML = '';
+function renderTips(tipsGrid, tips, categories) {
+    tipsGrid.innerHTML = '';
 
-        if (tips.length === 0) {
-            tipsGrid.innerHTML = '<div class="tips-loading">No se encontraron tips para esta categoría</div>';
-            return;
-        }
-
-        tips.forEach((tip, index) => {
-            const category = categories.find(cat => cat.id === tip.category);
-            const categoryColor = category ? category.color : '#D46528';
-
-            const tipCard = document.createElement('div');
-            tipCard.className = 'tip-card';
-            tipCard.style.setProperty('--tip-category-color', categoryColor);
-            tipCard.style.animationDelay = `${index * 0.1}s`;
-
-            tipCard.innerHTML = `
-                <div class="tip-header">
-                    <div class="tip-icon">
-                        <i class="${tip.icon}"></i>
-                    </div>
-                    <h3 class="tip-title">${tip.title}</h3>
-                </div>
-                <p class="tip-description">${tip.description}</p>
-                <div class="tip-meta">
-                    <span class="tip-category">${category ? category.name : tip.category}</span>
-                    <div class="tip-details">
-                        <span class="tip-difficulty">
-                            <i class="ph-fill ph-star"></i>
-                            ${tip.difficulty}
-                        </span>
-                        <span class="tip-time">
-                            <i class="ph-fill ph-clock"></i>
-                            ${tip.time}
-                        </span>
-                    </div>
-                </div>
-            `;
-
-            tipsGrid.appendChild(tipCard);
-        });
+    if (tips.length === 0) {
+        tipsGrid.innerHTML = '<div class="tips-loading">No se encontraron tips para esta categoría</div>';
+        return;
     }
 
-    function setupFilters() {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const selectedCategory = this.getAttribute('data-category');
+    tips.forEach((tip, index) => {
+        const category = categories.find(cat => cat.id === tip.category);
+        const categoryColor = category ? category.color : '#D46528';
 
-                // Actualizar botones activos
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+        const tipCard = document.createElement('div');
+        tipCard.className = 'tip-card';
+        tipCard.style.setProperty('--tip-category-color', categoryColor);
+        tipCard.style.animationDelay = `${index * 0.1}s`;
 
-                // Filtrar tips
-                let filteredTips = allTips;
-                if (selectedCategory !== 'todos') {
-                    filteredTips = allTips.filter(tip => tip.category === selectedCategory);
-                }
+        tipCard.innerHTML = `
+            <div class="tip-header">
+                <div class="tip-icon">
+                    <i class="${tip.icon}"></i>
+                </div>
+                <h3 class="tip-title">${tip.title}</h3>
+            </div>
+            <p class="tip-description">${tip.description}</p>
+            <div class="tip-meta">
+                <span class="tip-category">${category ? category.name : tip.category}</span>
+                <div class="tip-details">
+                    <span class="tip-difficulty">
+                        <i class="ph-fill ph-star"></i>
+                        ${tip.difficulty}
+                    </span>
+                    <span class="tip-time">
+                        <i class="ph-fill ph-clock"></i>
+                        ${tip.time}
+                    </span>
+                </div>
+            </div>
+        `;
 
-                renderTips(filteredTips);
-            });
+        tipsGrid.appendChild(tipCard);
+    });
+}
+
+function setupFilters(sectionSelector, allTips, categories) {
+    const filterButtons = document.querySelectorAll(`${sectionSelector} .filter-btn`);
+    const tipsGrid = document.querySelector(`${sectionSelector} .tips-grid`);
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const selectedCategory = this.getAttribute('data-category');
+
+            // Actualizar botones activos en esta sección
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filtrar tips
+            let filteredTips = allTips;
+            if (selectedCategory !== 'todos') {
+                filteredTips = allTips.filter(tip => tip.category === selectedCategory);
+            }
+
+            renderTips(tipsGrid, filteredTips, categories);
         });
-    }
+    });
 }
 
 // Servicios
@@ -380,18 +411,11 @@ async function initServices() {
     try {
         let services = [];
 
-        // Intentar cargar desde la base de datos
-        if (dataAdapter && dataAdapter.isReady()) {
-            const data = await dataAdapter.getServices();
-            services = data.services;
-            console.log('✅ Servicios cargados desde SQL.js');
-        } else {
-            // Fallback a archivos JSON
-            const response = await fetch('src/data/services.json');
-            const data = await response.json();
-            services = data.services || [];
-            console.log('✅ Servicios cargados desde JSON (fallback)');
-        }
+        // Cargar desde archivos JSON
+        const response = await fetch('src/data/services.json');
+        const data = await response.json();
+        services = data.services || [];
+        console.log('✅ Servicios cargados desde JSON');
 
         renderServices(services);
 
@@ -414,11 +438,4 @@ function renderServices(services) {
             <p class="service-description">${service.description}</p>
         </div>
     `).join('');
-}
-
-// Inicializar base de datos SQL.js
-initSqlJs({
-    locateFile: file => `src/vendors/${file}`
-}).then(SQL => {
-    // Tu código aquí
-}); 
+} 

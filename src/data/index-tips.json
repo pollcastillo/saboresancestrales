@@ -1,0 +1,146 @@
+{
+    "culinary_tips": [
+        {
+            "id": 1,
+            "title": "Técnica del Punto de Sal",
+            "description": "Añade sal al agua de cocción justo antes de que hierva. Esto ayuda a que los alimentos absorban mejor el sabor y mantengan su textura natural.",
+            "category": "tecnicas",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-salt"
+        },
+        {
+            "id": 2,
+            "title": "Conservación de Hierbas",
+            "description": "Guarda las hierbas frescas en papel húmedo dentro del refrigerador o congélalas en aceite de oliva para mantener su sabor por más tiempo.",
+            "category": "conservacion",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-leaf"
+        },
+        {
+            "id": 3,
+            "title": "Marinado con Hierbas",
+            "description": "Combina hierbas frescas con aceite de oliva, ajo y limón para crear marinados que realcen el sabor natural de las carnes y pescados.",
+            "category": "sabores",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-leaf"
+        },
+        {
+            "id": 4,
+            "title": "Presentación en Capas",
+            "description": "Organiza los ingredientes en capas para crear platos visualmente atractivos. Comienza con la base más sólida y termina con elementos decorativos.",
+            "category": "presentacion",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-layers"
+        },
+        {
+            "id": 5,
+            "title": "Seguridad al Cortar",
+            "description": "Mantén los dedos curvados al cortar, usa una tabla estable y mantén los cuchillos afilados para evitar accidentes en la cocina.",
+            "category": "seguridad",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-shield-check"
+        },
+        {
+            "id": 6,
+            "title": "Balance de Sabores",
+            "description": "Equilibra los sabores dulces, salados, ácidos y amargos en cada plato. Un toque de acidez puede transformar completamente un plato.",
+            "category": "sabores",
+            "difficulty": "intermedio",
+            "icon": "ph-fill ph-scales"
+        }
+    ],
+    "kitchen_tips": [
+        {
+            "id": 1,
+            "title": "Organización de Especias",
+            "description": "Guarda las especias en frascos herméticos lejos de la humedad y el calor. Organízalas alfabéticamente para encontrarlas fácilmente.",
+            "category": "organizacion",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-drop"
+        },
+        {
+            "id": 2,
+            "title": "Limpieza de Tablas de Corte",
+            "description": "Después de cortar carnes crudas, lava la tabla con agua caliente y jabón, luego desinféctala con una solución de vinagre blanco y agua.",
+            "category": "limpieza",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-spray-bottle"
+        },
+        {
+            "id": 3,
+            "title": "Seguridad en la Cocina",
+            "description": "Mantén siempre un extintor de fuego cerca, usa guantes para manipular ollas calientes y nunca dejes el aceite caliente sin supervisión.",
+            "category": "seguridad",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-shield-check"
+        },
+        {
+            "id": 4,
+            "title": "Organización de Batería",
+            "description": "Organiza las ollas y sartenes por tamaño y uso frecuente. Coloca las más usadas en lugares de fácil acceso para optimizar el espacio.",
+            "category": "organizacion",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-cooking-pot"
+        },
+        {
+            "id": 5,
+            "title": "Limpieza del Horno",
+            "description": "Limpia el horno después de cada uso con un paño húmedo. Para limpieza profunda, usa bicarbonato de sodio y vinagre una vez al mes.",
+            "category": "limpieza",
+            "difficulty": "fácil",
+            "icon": "ph-fill ph-oven"
+        },
+        {
+            "id": 6,
+            "title": "Mantenimiento de Cuchillos",
+            "description": "Afila los cuchillos regularmente con una piedra de afilar. Un cuchillo afilado es más seguro que uno desafilado y corta mejor los alimentos.",
+            "category": "seguridad",
+            "difficulty": "intermedio",
+            "icon": "ph-fill ph-knife"
+        }
+    ],
+    "culinary_categories": [
+        {
+            "id": "conservacion",
+            "name": "Conservación",
+            "color": "var(--color-accent-7-600)"
+        },
+        {
+            "id": "tecnicas",
+            "name": "Técnicas",
+            "color": "var(--color-accent-6-600)"
+        },
+        {
+            "id": "sabores",
+            "name": "Sabores",
+            "color": "var(--color-accent-8-600)"
+        },
+        {
+            "id": "presentacion",
+            "name": "Presentación",
+            "color": "var(--color-accent-9-600)"
+        },
+        {
+            "id": "seguridad",
+            "name": "Seguridad",
+            "color": "var(--color-accent-10-600)"
+        }
+    ],
+    "kitchen_categories": [
+        {
+            "id": "organizacion",
+            "name": "Organización",
+            "color": "var(--color-accent-11-600)"
+        },
+        {
+            "id": "limpieza",
+            "name": "Limpieza",
+            "color": "var(--color-accent-12-600)"
+        },
+        {
+            "id": "seguridad",
+            "name": "Seguridad",
+            "color": "var(--color-accent-10-600)"
+        }
+    ]
+}

@@ -45,6 +45,20 @@
     /* Azul acero */
     --color-accent-5: #DAA520;
     /* Dorado */
+    --color-accent-6: #8A2BE2;
+    /* Púrpura */
+    --color-accent-7: #00CED1;
+    /* Turquesa */
+    --color-accent-8: #FF69B4;
+    /* Rosa */
+    --color-accent-9: #32CD32;
+    /* Verde lima */
+    --color-accent-10: #FF6347;
+    /* Tomate */
+    --color-accent-11: #9370DB;
+    /* Violeta medio */
+    --color-accent-12: #20B2AA;
+    /* Mar claro */
 
     /* Paleta de Marrón Cálido (Accent 1) */
     --color-accent-1-50: #FDF8F3;
@@ -105,6 +119,90 @@
     --color-accent-5-700: #AE831A;
     --color-accent-5-800: #987217;
     --color-accent-5-900: #826114;
+
+    /* Paleta de Púrpura (Accent 6) */
+    --color-accent-6-50: #F8F3FE;
+    --color-accent-6-100: #F1E7FD;
+    --color-accent-6-200: #E3CFFB;
+    --color-accent-6-300: #C79FF7;
+    --color-accent-6-400: #AB6FF3;
+    --color-accent-6-500: #8A2BE2;
+    --color-accent-6-600: #7C26CB;
+    --color-accent-6-700: #6E22B4;
+    --color-accent-6-800: #601E9D;
+    --color-accent-6-900: #521A86;
+
+    /* Paleta de Turquesa (Accent 7) */
+    --color-accent-7-50: #F0FDFF;
+    --color-accent-7-100: #E1FBFF;
+    --color-accent-7-200: #C3F7FF;
+    --color-accent-7-300: #87EFFF;
+    --color-accent-7-400: #4BE7FF;
+    --color-accent-7-500: #00CED1;
+    --color-accent-7-600: #00B9BC;
+    --color-accent-7-700: #00A4A7;
+    --color-accent-7-800: #008F92;
+    --color-accent-7-900: #007A7D;
+
+    /* Paleta de Rosa (Accent 8) */
+    --color-accent-8-50: #FEF2F8;
+    --color-accent-8-100: #FDE5F1;
+    --color-accent-8-200: #FBCBE3;
+    --color-accent-8-300: #F797C7;
+    --color-accent-8-400: #F363AB;
+    --color-accent-8-500: #FF69B4;
+    --color-accent-8-600: #E55EA2;
+    --color-accent-8-700: #CB5390;
+    --color-accent-8-800: #B1487E;
+    --color-accent-8-900: #973D6C;
+
+    /* Paleta de Verde Lima (Accent 9) */
+    --color-accent-9-50: #F2FDF2;
+    --color-accent-9-100: #E5FBE5;
+    --color-accent-9-200: #CBF7CB;
+    --color-accent-9-300: #97EF97;
+    --color-accent-9-400: #63E763;
+    --color-accent-9-500: #32CD32;
+    --color-accent-9-600: #2DB82D;
+    --color-accent-9-700: #28A328;
+    --color-accent-9-800: #238E23;
+    --color-accent-9-900: #1E791E;
+
+    /* Paleta de Tomate (Accent 10) */
+    --color-accent-10-50: #FEF2F2;
+    --color-accent-10-100: #FDE5E5;
+    --color-accent-10-200: #FBCBCB;
+    --color-accent-10-300: #F79797;
+    --color-accent-10-400: #F36363;
+    --color-accent-10-500: #FF6347;
+    --color-accent-10-600: #E55940;
+    --color-accent-10-700: #CB4F39;
+    --color-accent-10-800: #B14532;
+    --color-accent-10-900: #973B2B;
+
+    /* Paleta de Violeta Medio (Accent 11) */
+    --color-accent-11-50: #F8F3FE;
+    --color-accent-11-100: #F1E7FD;
+    --color-accent-11-200: #E3CFFB;
+    --color-accent-11-300: #C79FF7;
+    --color-accent-11-400: #AB6FF3;
+    --color-accent-11-500: #9370DB;
+    --color-accent-11-600: #8565C5;
+    --color-accent-11-700: #775AAF;
+    --color-accent-11-800: #694F99;
+    --color-accent-11-900: #5B4483;
+
+    /* Paleta de Mar Claro (Accent 12) */
+    --color-accent-12-50: #F0FDFD;
+    --color-accent-12-100: #E1FBFB;
+    --color-accent-12-200: #C3F7F7;
+    --color-accent-12-300: #87EFEF;
+    --color-accent-12-400: #4BE7E7;
+    --color-accent-12-500: #20B2AA;
+    --color-accent-12-600: #1DA099;
+    --color-accent-12-700: #1A8E88;
+    --color-accent-12-800: #177C77;
+    --color-accent-12-900: #146A66;
 
     /* Colores neutros y de fondo */
     --color-neutral-50: #FAFAFA;

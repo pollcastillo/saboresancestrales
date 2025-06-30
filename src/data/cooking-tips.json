@@ -1,5 +1,5 @@
 {
-    "tips": [
+    "culinary_tips": [
         {
             "id": 1,
             "title": "Conservación de Hierbas Frescas",
@@ -92,6 +92,233 @@
         },
         {
             "id": 11,
+            "title": "Técnica de Corte Juliana",
+            "description": "Para cortes juliana, corta los vegetales en tiras finas de 3-5cm de largo. Ideal para zanahorias, pimientos y apio.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "intermedio",
+            "time": "10 min"
+        },
+        {
+            "id": 12,
+            "title": "Técnica de Corte Brunoise",
+            "description": "El corte brunoise son cubos de 2-3mm. Primero corta en juliana, luego en cubos pequeños. Perfecto para salsas y guarniciones.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "avanzado",
+            "time": "15 min"
+        },
+        {
+            "id": 13,
+            "title": "Técnica de Corte Chiffonade",
+            "description": "Para hojas como albahaca o espinacas, apílalas, enróllalas y corta en tiras finas. Esto libera más sabor y aroma.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 14,
+            "title": "Técnica de Corte Mirepoix",
+            "description": "Corta cebolla, zanahoria y apio en cubos de 1cm. Esta base aromática es fundamental para sopas y salsas.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "intermedio",
+            "time": "12 min"
+        },
+        {
+            "id": 15,
+            "title": "Técnica de Corte Paysanne",
+            "description": "Corta vegetales en formas planas de 1cm. Ideal para sopas y guisos donde quieres que los vegetales se vean.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "intermedio",
+            "time": "8 min"
+        },
+        {
+            "id": 16,
+            "title": "Técnica de Corte Batonnet",
+            "description": "Corta en palitos de 6cm de largo y 6mm de grosor. Perfecto para vegetales que se servirán como guarnición.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "intermedio",
+            "time": "10 min"
+        },
+        {
+            "id": 17,
+            "title": "Técnica de Corte Allumette",
+            "description": "Similar al batonnet pero más fino (3mm). Ideal para papas fritas caseras y vegetales para saltear.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "avanzado",
+            "time": "12 min"
+        },
+        {
+            "id": 18,
+            "title": "Técnica de Corte Tourné",
+            "description": "Corta vegetales en forma de balón de rugby. Usa un cuchillo de tourné para crear cortes uniformes y elegantes.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "avanzado",
+            "time": "15 min"
+        },
+        {
+            "id": 19,
+            "title": "Zona de Peligro de Temperatura",
+            "description": "Evita mantener alimentos entre 4°C y 60°C por más de 2 horas. Esta zona permite el crecimiento rápido de bacterias.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 20,
+            "title": "Separación de Alimentos Crudos",
+            "description": "Nunca uses la misma tabla o utensilio para carnes crudas y alimentos listos para comer. Usa códigos de color para diferenciar.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 21,
+            "title": "Lavado de Manos Profesional",
+            "description": "Lávate las manos con agua caliente y jabón por 20 segundos antes y después de manipular alimentos, especialmente carnes.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-hand-washing",
+            "difficulty": "fácil",
+            "time": "1 min"
+        },
+        {
+            "id": 22,
+            "title": "Temperatura Interna de Carnes",
+            "description": "Res: 63°C, Pollo: 74°C, Cerdo: 71°C, Pescado: 63°C. Usa un termómetro de cocina para verificar la temperatura interna.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer-hot",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 23,
+            "title": "Enfriamiento Rápido",
+            "description": "Para enfriar alimentos calientes, divide en porciones pequeñas y refrigera en recipientes poco profundos. No más de 2 horas a temperatura ambiente.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "intermedio",
+            "time": "30 min"
+        },
+        {
+            "id": 24,
+            "title": "Descongelación Segura",
+            "description": "Descongela alimentos en el refrigerador, en agua fría cambiada cada 30 minutos, o en el microondas. Nunca a temperatura ambiente.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "fácil",
+            "time": "varía"
+        },
+        {
+            "id": 25,
+            "title": "Limpieza de Superficies",
+            "description": "Limpia y desinfecta todas las superficies de trabajo antes y después de preparar alimentos. Usa solución de cloro 1:10.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 26,
+            "title": "Almacenamiento de Huevos",
+            "description": "Guarda los huevos en el refrigerador a 4°C o menos. No los laves antes de guardar, solo antes de usar.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-egg",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 27,
+            "title": "Prevención de Contaminación Cruzada",
+            "description": "Usa guantes desechables al manipular alimentos crudos y cámbialos frecuentemente. Lava utensilios entre diferentes tipos de alimentos.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 28,
+            "title": "Temperatura del Refrigerador",
+            "description": "Mantén el refrigerador a 4°C o menos y el congelador a -18°C. Verifica la temperatura regularmente con un termómetro.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer-cold",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 29,
+            "title": "Limpieza de Frutas y Verduras",
+            "description": "Lava todas las frutas y verduras bajo agua corriente, incluso las que tienen cáscara. Usa un cepillo para productos con cáscara dura.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 30,
+            "title": "Prevención de Intoxicaciones",
+            "description": "Nunca pruebes alimentos que huelan mal o tengan textura extraña. En caso de duda, desecha el alimento.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-warning",
+            "difficulty": "fácil",
+            "time": "1 min"
+        },
+        {
+            "id": 31,
+            "title": "Temperatura de Servicio para Eventos",
+            "description": "En eventos, mantén los alimentos calientes a 60°C o más usando bandejas calentadoras. Los alimentos fríos deben estar a 4°C o menos.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer",
+            "difficulty": "intermedio",
+            "time": "10 min"
+        },
+        {
+            "id": 32,
+            "title": "Limpieza de Equipos de Cocina",
+            "description": "Limpia y desinfecta todos los equipos después de cada uso. Presta especial atención a batidoras, procesadores y molinos.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 33,
+            "title": "Prevención de Quemaduras",
+            "description": "Usa guantes de cocina al manipular ollas calientes y siempre abre las ollas de presión lejos de tu rostro.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 34,
+            "title": "Almacenamiento de Salsas",
+            "description": "Las salsas con huevo o lácteos deben refrigerarse inmediatamente y consumirse en 3-4 días. Las salsas ácidas duran más tiempo.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 35,
+            "title": "Limpieza de Filtros de Campana",
+            "description": "Limpia los filtros de la campana extractora mensualmente. Los filtros sucios pueden causar incendios y contaminar los alimentos.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "intermedio",
+            "time": "20 min"
+        }
+    ],
+    "kitchen_tips": [
+        {
+            "id": 1,
             "title": "Preparación Anticipada",
             "description": "Para eventos grandes, prepara ingredientes hasta 24 horas antes. Esto reduce el estrés y mejora la calidad del servicio.",
             "category": "organizacion",
@@ -100,25 +327,16 @@
             "time": "60 min"
         },
         {
-            "id": 12,
-            "title": "Técnica de Emulsión",
-            "description": "Para salsas cremosas, añade el aceite gota a gota mientras bates constantemente. Esto evita que se separe la emulsión.",
-            "category": "tecnicas",
-            "icon": "ph-fill ph-arrows-clockwise",
-            "difficulty": "avanzado",
-            "time": "15 min"
-        },
-        {
-            "id": 13,
+            "id": 2,
             "title": "Limpieza de Tablas de Corte",
             "description": "Después de cortar carnes, limpia la tabla con agua caliente y jabón, luego desinféctala con vinagre blanco o limón.",
             "category": "limpieza",
-            "icon": "ph-fill ph-knife",
+            "icon": "ph-fill ph-spray-bottle",
             "difficulty": "fácil",
             "time": "5 min"
         },
         {
-            "id": 14,
+            "id": 3,
             "title": "Mantenimiento de Cuchillos",
             "description": "Lava los cuchillos inmediatamente después de usar, sécalos bien y guárdalos en un bloque de madera para mantener el filo.",
             "category": "limpieza",
@@ -127,77 +345,336 @@
             "time": "3 min"
         },
         {
-            "id": 15,
+            "id": 4,
             "title": "Limpieza de Ollas de Acero",
             "description": "Para ollas con residuos quemados, usa bicarbonato de sodio y agua caliente. Deja reposar 30 minutos antes de fregar.",
             "category": "limpieza",
-            "icon": "ph-fill ph-cooking-pot",
+            "icon": "ph-fill ph-spray-bottle",
             "difficulty": "intermedio",
             "time": "35 min"
         },
         {
-            "id": 16,
+            "id": 5,
             "title": "Desinfección de Superficies",
             "description": "Limpia las superficies de trabajo con una solución de 1 parte de vinagre por 3 partes de agua antes y después de cocinar.",
             "category": "limpieza",
-            "icon": "ph-fill ph-shield-check",
+            "icon": "ph-fill ph-spray-bottle",
             "difficulty": "fácil",
             "time": "10 min"
         },
         {
-            "id": 17,
+            "id": 6,
             "title": "Limpieza de Batidoras",
             "description": "Desmonta las cuchillas de la batidora y límpialas por separado. Usa un cepillo pequeño para llegar a las áreas difíciles.",
             "category": "limpieza",
-            "icon": "ph-fill ph-lightning",
+            "icon": "ph-fill ph-spray-bottle",
             "difficulty": "intermedio",
             "time": "8 min"
         },
         {
-            "id": 18,
+            "id": 7,
             "title": "Mantenimiento de Sartenes",
             "description": "Para sartenes antiadherentes, usa esponjas suaves y evita utensilios metálicos. Seca completamente antes de guardar.",
             "category": "limpieza",
-            "icon": "ph-fill ph-circle",
+            "icon": "ph-fill ph-spray-bottle",
             "difficulty": "fácil",
             "time": "5 min"
+        },
+        {
+            "id": 8,
+            "title": "Cuidado de Carnes",
+            "description": "Descongela las carnes en el refrigerador, nunca a temperatura ambiente. Esto previene el crecimiento de bacterias.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-cow",
+            "difficulty": "fácil",
+            "time": "24 horas"
+        },
+        {
+            "id": 9,
+            "title": "Cuidado de Vegetales",
+            "description": "Lava los vegetales con agua fría y un cepillo suave. Para vegetales de hoja, usa agua con vinagre para eliminar pesticidas.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-carrot",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 10,
+            "title": "Organización de Refrigerador",
+            "description": "Mantén las carnes crudas en la parte inferior, los lácteos en el medio y las frutas/vegetales en los cajones superiores.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "fácil",
+            "time": "15 min"
+        },
+        {
+            "id": 11,
+            "title": "Limpieza de Hornos",
+            "description": "Para hornos sucios, usa una pasta de bicarbonato y agua. Aplica, deja reposar 30 minutos y limpia con esponja húmeda.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-oven",
+            "difficulty": "intermedio",
+            "time": "40 min"
+        },
+        {
+            "id": 12,
+            "title": "Mantenimiento de Licuadoras",
+            "description": "Limpia la licuadora con agua caliente y jabón después de cada uso. Para residuos difíciles, usa agua con hielo y sal.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 13,
+            "title": "Cuidado de Especias",
+            "description": "Guarda las especias en frascos herméticos lejos del calor y la luz. Reemplaza las especias molidas cada 6 meses.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-package",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 14,
+            "title": "Limpieza de Microondas",
+            "description": "Limpia el microondas con agua y vinagre. Calienta por 5 minutos, luego limpia fácilmente con una esponja.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "8 min"
+        },
+        {
+            "id": 15,
+            "title": "Organización de Alacena",
+            "description": "Organiza la alacena por categorías: granos, conservas, condimentos. Usa contenedores transparentes para mejor visibilidad.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-cabinet",
+            "difficulty": "intermedio",
+            "time": "45 min"
+        },
+        {
+            "id": 16,
+            "title": "Cuidado de Aceites",
+            "description": "Guarda los aceites en botellas oscuras lejos del calor. El aceite de oliva se conserva mejor en el refrigerador.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 17,
+            "title": "Limpieza de Cafeteras",
+            "description": "Limpia la cafetera mensualmente con vinagre blanco. Ejecuta un ciclo completo y luego enjuaga con agua.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "intermedio",
+            "time": "20 min"
+        },
+        {
+            "id": 18,
+            "title": "Mantenimiento de Trituradores",
+            "description": "Para limpiar el triturador, vierte hielo y sal gruesa, luego enciende por 30 segundos. Enjuaga con agua caliente.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "3 min"
+        },
+        {
+            "id": 19,
+            "title": "Cuidado de Lácteos",
+            "description": "Guarda los lácteos en la parte más fría del refrigerador. Nunca los dejes a temperatura ambiente por más de 2 horas.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 20,
+            "title": "Organización de Utensilios",
+            "description": "Organiza los utensilios por frecuencia de uso. Los más usados deben estar al alcance de la mano.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-fork-knife",
+            "difficulty": "fácil",
+            "time": "20 min"
+        },
+        {
+            "id": 21,
+            "title": "Limpieza de Campanas",
+            "description": "Limpia la campana extractora mensualmente. Usa desengrasante específico para eliminar la grasa acumulada.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "avanzado",
+            "time": "60 min"
+        },
+        {
+            "id": 22,
+            "title": "Cuidado de Frutas",
+            "description": "Lava las frutas justo antes de consumir, no antes de guardar. Las frutas con cáscara comestible requieren más atención.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-apple-logo",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 23,
+            "title": "Mantenimiento de Baterías",
+            "description": "Limpia las baterías de cocina con agua caliente y jabón suave. Evita usar estropajos metálicos en superficies antiadherentes.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "intermedio",
+            "time": "25 min"
+        },
+        {
+            "id": 24,
+            "title": "Organización de Congelador",
+            "description": "Etiqueta todos los alimentos congelados con fecha y contenido. Organiza por categorías para fácil acceso.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "fácil",
+            "time": "30 min"
+        },
+        {
+            "id": 25,
+            "title": "Limpieza de Grifos",
+            "description": "Limpia los grifos con vinagre blanco y bicarbonato. Usa un cepillo de dientes para las áreas difíciles.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 26,
+            "title": "Cuidado de Pollo",
+            "description": "Lava el pollo con agua fría antes de cocinar. Usa una tabla de corte específica para aves y desinféctala después.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-feather",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 27,
+            "title": "Cuidado de Pescado",
+            "description": "Guarda el pescado en la parte más fría del refrigerador. Consume dentro de 1-2 días para máxima frescura.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-fish",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 28,
+            "title": "Cuidado de Cerdo",
+            "description": "Cocina el cerdo a una temperatura interna mínima de 63°C. Usa un termómetro para verificar la cocción.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-piggy-bank",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 29,
+            "title": "Cuidado de Queso",
+            "description": "Guarda el queso en papel encerado o papel de aluminio, nunca en plástico. Esto permite que respire y mantenga su sabor.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "fácil",
+            "time": "3 min"
+        },
+        {
+            "id": 30,
+            "title": "Control de Humedad",
+            "description": "Mantén la humedad de la cocina entre 40-60%. Usa extractores y deshumidificadores para prevenir moho y bacterias.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 31,
+            "title": "Almacenamiento de Bebidas",
+            "description": "Guarda las bebidas alcohólicas en un lugar fresco y oscuro. Las bebidas carbonatadas se conservan mejor en el refrigerador.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-wine",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 32,
+            "title": "Prevención de Humedad en Alacena",
+            "description": "Usa contenedores herméticos para granos y especias. Coloca paquetes desecantes para absorber la humedad excesiva.",
+            "category": "organizacion",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 33,
+            "title": "Limpieza de Manchas de Cigarrillo",
+            "description": "Para eliminar manchas de cigarrillo en superficies, usa una mezcla de vinagre blanco y bicarbonato de sodio.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "intermedio",
+            "time": "20 min"
+        },
+        {
+            "id": 34,
+            "title": "Cuidado de Quesos Curados",
+            "description": "Los quesos curados necesitan ventilación. Guárdalos en un recipiente especial para quesos o en papel encerado.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 35,
+            "title": "Control de Humedad en Refrigerador",
+            "description": "Limpia regularmente el condensador del refrigerador. Usa contenedores con tapa para evitar la acumulación de humedad.",
+            "category": "limpieza",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "intermedio",
+            "time": "30 min"
         }
     ],
-    "categories": [
+    "culinary_categories": [
         {
             "id": "conservacion",
             "name": "Conservación",
-            "color": "var(--color-primary-2-600)"
+            "color": "var(--color-accent-7-600)"
         },
         {
             "id": "tecnicas",
             "name": "Técnicas",
-            "color": "var(--color-primary-1-600)"
+            "color": "var(--color-accent-6-600)"
         },
         {
             "id": "sabores",
             "name": "Sabores",
-            "color": "var(--color-accent-1-600)"
+            "color": "var(--color-accent-8-600)"
         },
         {
             "id": "presentacion",
             "name": "Presentación",
-            "color": "var(--color-accent-2-600)"
+            "color": "var(--color-accent-9-600)"
         },
         {
             "id": "seguridad",
             "name": "Seguridad",
-            "color": "var(--color-accent-3-600)"
-        },
+            "color": "var(--color-accent-10-600)"
+        }
+    ],
+    "kitchen_categories": [
         {
             "id": "organizacion",
             "name": "Organización",
-            "color": "var(--color-accent-4-600)"
+            "color": "var(--color-accent-11-600)"
         },
         {
             "id": "limpieza",
             "name": "Limpieza",
-            "color": "var(--color-accent-5-600)"
+            "color": "var(--color-accent-12-600)"
+        },
+        {
+            "id": "seguridad",
+            "name": "Seguridad",
+            "color": "var(--color-accent-10-600)"
         }
     ]
 }

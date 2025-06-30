@@ -2,7 +2,7 @@
 .hero {
     padding-top: 120px;
     padding-bottom: var(--space-12);
-    background: var(--color-background-secondary);
+    background: radial-gradient(ellipse at 60% 80%, #e0e7ff 0%, #fce7f3 30%, #fef9c3 50%, #bbf7d0 70%, #a5f3fc 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -12,35 +12,20 @@
 
 /* Gradiente animado elegante */
 .hero::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 0% 0%, var(--color-primary-1-100) 0%, transparent 50%),
-        radial-gradient(circle at 100% 0%, var(--color-primary-2-100) 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, var(--color-accent-1-100) 0%, transparent 50%),
-        radial-gradient(circle at 0% 100%, var(--color-accent-2-100) 0%, transparent 50%);
-    opacity: 0.4;
-    z-index: 1;
-    animation: gradientShift 20s ease-in-out infinite;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at 60% 80%, #e0e7ff 0%, #fce7f3 30%, #fef9c3 50%, #bbf7d0 70%, #a5f3fc 100%);
 }
 
 .hero::after {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        linear-gradient(45deg, transparent 40%, var(--color-primary-1-50) 50%, transparent 60%),
-        linear-gradient(-45deg, transparent 40%, var(--color-primary-2-50) 50%, transparent 60%);
-    opacity: 0.2;
-    z-index: 2;
-    animation: gradientFlow 15s ease-in-out infinite;
+    inset: 0;
+    z-index: 1;
+    backdrop-filter: blur(48px);
+    background: rgba(255, 255, 255, 0.45);
 }
 
 /* Animaciones del gradiente */
@@ -107,26 +92,24 @@
 }
 
 /* Modo oscuro para hero */
+@media (prefers-color-scheme: dark),
 [data-theme="dark"] .hero {
-    background: var(--color-background-secondary);
+    background: radial-gradient(ellipse at 70% 90%, #0ea5e9 0%, #0ea5e900 40%),
+    radial-gradient(ellipse at 30% 60%, #a21caf 0%, #a21caf00 50%),
+    radial-gradient(ellipse at 80% 20%, #fbbf24 0%, #fbbf2400 60%),
+    linear-gradient(120deg, #0f172a 0%, #181926 100%);
 }
 
+@media (prefers-color-scheme: dark),
 [data-theme="dark"] .hero::before {
-    background:
-        radial-gradient(circle at 0% 0%, var(--color-primary-1-900) 0%, transparent 50%),
-        radial-gradient(circle at 100% 0%, var(--color-primary-2-900) 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, var(--color-accent-1-900) 0%, transparent 50%),
-        radial-gradient(circle at 0% 100%, var(--color-accent-2-900) 0%, transparent 50%);
-    opacity: 0.2;
-    animation: gradientShiftDark 20s ease-in-out infinite;
+    background: radial-gradient(ellipse at 70% 90%, #0ea5e9 0%, #0ea5e900 40%),
+    radial-gradient(ellipse at 30% 60%, #a21caf 0%, #a21caf00 50%),
+    radial-gradient(ellipse at 80% 20%, #fbbf24 0%, #fbbf2400 60%),
+    linear-gradient(120deg, #0f172a 0%, #181926 100%);
 }
 
 [data-theme="dark"] .hero::after {
-    background:
-        linear-gradient(45deg, transparent 40%, var(--color-primary-1-800) 50%, transparent 60%),
-        linear-gradient(-45deg, transparent 40%, var(--color-primary-2-800) 50%, transparent 60%);
-    opacity: 0.15;
-    animation: gradientFlowDark 15s ease-in-out infinite;
+    background: rgba(16, 18, 26, 0.72);
 }
 
 /* Animaciones del gradiente para modo oscuro */
@@ -296,4 +279,9 @@
     .hero-image img {
         height: 250px;
     }
+}
+
+.hero>* {
+    position: relative;
+    z-index: 2;
 }

@@ -33,9 +33,10 @@
                     <ul class="nav-list">
                         <li><a href="#inicio" class="nav-link">Inicio</a></li>
                         <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="#tips" class="nav-link">Tips</a></li>
+                        <li><a href="tips-culinarios.html" class="nav-link">Tips Culinarios</a></li>
+                        <li><a href="tips-cocina.html" class="nav-link">Tips de Cocina</a></li>
                         <li><a href="#galeria" class="nav-link">Galería</a></li>
-                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                        <li><a href="menus.html" class="nav-link">Menús</a></li>
                     </ul>
                 </nav>
                 <div class="header-controls">
@@ -65,7 +66,7 @@
                         <button class="btn btn-primary">
                             Solicitar Cotización
                         </button>
-                        <button class="btn btn-secondary">
+                        <button class="btn btn-secondary" onclick="window.location.href='menus.html'">
                             Ver Menús
                         </button>
                     </div>
@@ -91,26 +92,70 @@
         </div>
     </section>
 
-    <!-- Tips de Cocina Section -->
-    <section class="tips" id="tips">
+    <!-- Llamado de Atención Section -->
+    <section class="attention-call" id="atencion">
         <div class="container">
-            <div class="tips-header">
-                <h2 class="tips-title">Tips de Cocina</h2>
-                <p class="tips-description">Secretos culinarios para elevar tus platos al siguiente nivel</p>
+            <div class="attention-content">
+                <div class="attention-icon">
+                    <i class="ph-fill ph-heart"></i>
+                </div>
+                <div class="attention-text">
+                    <div class="attention-features">
+                        <div class="feature-item">
+                            <i class="ph-fill ph-leaf"></i>
+                            <span>Ingredientes Naturales</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-fill ph-heart"></i>
+                            <span>Bajo en Grasa</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-fill ph-shield-check"></i>
+                            <span>Sin Azúcares Añadidos</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-fill ph-star"></i>
+                            <span>Calidad Premium</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tips-filters">
-                <button class="filter-btn active" data-category="todos">Todos</button>
-                <button class="filter-btn" data-category="conservacion">Conservación</button>
-                <button class="filter-btn" data-category="tecnicas">Técnicas</button>
-                <button class="filter-btn" data-category="sabores">Sabores</button>
-                <button class="filter-btn" data-category="presentacion">Presentación</button>
-                <button class="filter-btn" data-category="seguridad">Seguridad</button>
-                <button class="filter-btn" data-category="organizacion">Organización</button>
-                <button class="filter-btn" data-category="limpieza">Limpieza</button>
-            </div>
-            <div class="tips-grid" id="tipsGrid">
-                <!-- Los tips se cargarán dinámicamente desde JavaScript -->
-            </div>
+        </div>
+    </section>
+
+    <!-- Tips Culinarios Section -->
+    <section class="tips culinary-tips" id="tips-culinarios">
+        <div class="tips-header">
+            <h2 class="tips-title">Tips Culinarios</h2>
+            <p class="tips-description">Secretos culinarios para elevar tus platos al siguiente nivel</p>
+        </div>
+        <div class="tips-filters">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="conservacion">Conservación</button>
+            <button class="filter-btn" data-category="tecnicas">Técnicas</button>
+            <button class="filter-btn" data-category="sabores">Sabores</button>
+            <button class="filter-btn" data-category="presentacion">Presentación</button>
+            <button class="filter-btn" data-category="seguridad">Seguridad</button>
+        </div>
+        <div class="tips-grid tips-grid-3" id="culinaryTipsGrid">
+            <!-- Los tips culinarios se cargarán dinámicamente desde JavaScript -->
+        </div>
+    </section>
+
+    <!-- Tips de Cocina Section -->
+    <section class="tips kitchen-tips" id="tips-cocina">
+        <div class="tips-header">
+            <h2 class="tips-title">Tips de Cocina</h2>
+            <p class="tips-description">Consejos para el mantenimiento, limpieza y organización de tu cocina</p>
+        </div>
+        <div class="tips-filters">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="organizacion">Organización</button>
+            <button class="filter-btn" data-category="limpieza">Limpieza</button>
+            <button class="filter-btn" data-category="seguridad">Seguridad</button>
+        </div>
+        <div class="tips-grid tips-grid-3" id="kitchenTipsGrid">
+            <!-- Los tips de cocina se cargarán dinámicamente desde JavaScript -->
         </div>
     </section>
 
@@ -168,77 +213,6 @@
         </div>
     </section>
 
-    <!-- Contacto Section -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contáctanos</h2>
-                <p class="section-description">Estamos aquí para hacer tu evento inolvidable</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Teléfono</h3>
-                            <p>+593 4 1234 5678</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>info@saboresancestrales.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Ubicación</h3>
-                            <p>Guayaquil - Ecuador</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Nombre completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-input" placeholder="Teléfono">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-select">
-                            <option value="">Seleccionar servicio</option>
-                            <option value="catering">Catering Corporativo</option>
-                            <option value="eventos">Eventos Especiales</option>
-                            <option value="coffee">Coffee Breaks</option>
-                            <option value="saludable">Menús Saludables</option>
-                            <option value="desayunos">Desayunos Ejecutivos</option>
-                            <option value="domicilio">Catering a Domicilio</option>
-                            <option value="limpieza">Servicios de Limpieza</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-textarea" placeholder="Mensaje" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-send"></i>
-                        Enviar Mensaje
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -262,15 +236,9 @@
                 <div class="footer-section">
                     <h4 class="footer-subtitle">Contacto</h4>
                     <ul class="footer-list">
-                        <li>+593 4 1234 5678</li>
-                        <li>info@saboresancestrales.com</li>
-                        <li>Guayaquil - Ecuador</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Administración</h4>
-                    <ul class="footer-list">
-                        <li><a href="admin.html" class="footer-link">Panel de Administración</a></li>
+                        <li><i class="ph-fill ph-phone"></i> +593 4 1234 5678</li>
+                        <li><i class="ph-fill ph-envelope"></i> info@saboresancestrales.com</li>
+                        <li><i class="ph-fill ph-map-pin"></i> Guayaquil - Ecuador</li>
                     </ul>
                 </div>
             </div>
@@ -281,8 +249,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="src/js/database/DatabaseManager.js"></script>
-    <script src="src/js/database/DataAdapter.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 

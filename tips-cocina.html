@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips de Cocina - Sabores Ancestrales</title>
+    <meta name="description"
+        content="Consejos para el mantenimiento, limpieza y organización de tu cocina profesional.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/tips.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="src/styles/fonts.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="src/styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/icons/Phosphor/fill/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="src/images/light_logo.svg" alt="Sabores Ancestrales" class="logo-image light-logo">
+                    <img src="src/images/dark_logo.svg" alt="Sabores Ancestrales" class="logo-image dark-logo">
+                    <span class="logo-text">Sabores Ancestrales</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="tips-culinarios.html" class="nav-link">Tips Culinarios</a></li>
+                        <li><a href="tips-cocina.html" class="nav-link">Tips de Cocina</a></li>
+                        <li><a href="index.html#galeria" class="nav-link">Galería</a></li>
+                        <li><a href="menus.html" class="nav-link">Menús</a></li>
+                    </ul>
+                </nav>
+                <div class="header-controls">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="ph-fill ph-sun theme-icon light"></i>
+                        <i class="ph-fill ph-moon theme-icon dark"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tips de Cocina Section -->
+    <section class="tips kitchen-tips" id="tips-cocina">
+        <div class="tips-header">
+            <h2 class="tips-title">Mantenimiento y Organización</h2>
+            <p class="tips-description">Consejos profesionales para mantener tu cocina limpia, organizada y segura</p>
+        </div>
+        <div class="tips-filters">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="organizacion">Organización</button>
+            <button class="filter-btn" data-category="limpieza">Limpieza</button>
+            <button class="filter-btn" data-category="seguridad">Seguridad</button>
+        </div>
+        <div class="tips-grid tips-grid-4" id="kitchenTipsGrid">
+            <!-- Los tips de cocina se cargarán dinámicamente desde JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sabores Ancestrales</h3>
+                    <p class="footer-description">Catering empresarial con tradición familiar</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Servicios</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html#servicios">Catering Corporativo</a></li>
+                        <li><a href="index.html#servicios">Eventos Especiales</a></li>
+                        <li><a href="index.html#servicios">Coffee Breaks</a></li>
+                        <li><a href="index.html#servicios">Menús Saludables</a></li>
+                        <li><a href="index.html#servicios">Desayunos Ejecutivos</a></li>
+                        <li><a href="index.html#servicios">Catering a Domicilio</a></li>
+                        <li><a href="index.html#servicios">Servicios de Limpieza</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <ul class="footer-list">
+                        <li><i class="ph-fill ph-phone"></i> +593 4 1234 5678</li>
+                        <li><i class="ph-fill ph-envelope"></i> info@saboresancestrales.com</li>
+                        <li><i class="ph-fill ph-map-pin"></i> Guayaquil - Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sabores Ancestrales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>

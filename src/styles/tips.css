@@ -1,12 +1,34 @@
 /* Tips de Cocina Section */
 .tips {
-    padding: 80px 0;
+    padding: 120px 0 80px;
+    background-color: var(--color-background-secondary);
+    width: 100%;
+}
+
+/* Container más ancho para tips */
+.tips .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Tips Culinarios - Fondo más claro */
+.culinary-tips {
+    background-color: var(--color-background-primary);
+}
+
+/* Tips de Cocina - Fondo más oscuro */
+.kitchen-tips {
     background-color: var(--color-background-secondary);
 }
 
 .tips-header {
     text-align: center;
     margin-bottom: 64px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
 }
 
 .tips-title {
@@ -19,7 +41,7 @@
 .tips-description {
     font-size: 20px;
     color: var(--color-text-secondary);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -30,6 +52,10 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 48px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
 }
 
 .filter-btn {
@@ -61,6 +87,77 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Grid específico para el index - 3 columnas fijas */
+.tips-grid-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.tips-grid-index .tip-card {
+    width: 100%;
+}
+
+/* Grid de 4 columnas para páginas dedicadas */
+.tips-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1800px;
+}
+
+/* Grid de 3 columnas responsivo para tips de cocina y culinarios
+ * 
+ * IMPORTANTE: Esta clase usa repeat(auto-fit, minmax(320px, 1fr)) para que:
+ * - Las tarjetas siempre ocupen el ancho completo disponible
+ * - Se adapten automáticamente cuando hay menos de 3 elementos
+ * - NO se creen columnas vacías como ocurriría con repeat(3, 1fr)
+ * 
+ * Propiedades explicadas:
+ * - display: grid - Define el contenedor como grid CSS
+ * - grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) - Columnas que se ajustan automáticamente
+ *   * auto-fit: Crea tantas columnas como quepan en el espacio disponible
+ *   * minmax(320px, 1fr): Cada columna tiene mínimo 320px y máximo 1fr (resto del espacio)
+ * - gap: 32px - Espaciado entre elementos (siguiendo grilla de 8)
+ * - width: 100% - Ocupa todo el ancho disponible del contenedor padre
+ * - max-width: 1400px - Límite máximo para mantener proporciones en pantallas grandes
+ * - margin: 0 auto - Centra el grid horizontalmente
+ * - padding: 0 16px - Padding lateral para evitar que toque los bordes
+ */
+.tips-grid.tips-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Hero específico para páginas de tips */
+.tips-hero {
+    background: linear-gradient(135deg, var(--color-primary-1) 0%, var(--color-primary-2) 100%);
+    color: white;
+    text-align: center;
+    padding: 120px 0 80px;
+}
+
+.tips-hero .hero-title {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.tips-hero .hero-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Tarjeta de tip */
@@ -192,63 +289,95 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .tips .container {
+        max-width: 1400px;
+        padding: 0 16px;
+    }
+
     .tips-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        max-width: 1400px;
+    }
+
+    .tips-grid-index {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .tips-grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 1400px;
+    }
+
+    .tips-grid.tips-grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 24px;
     }
 }
 
 @media (max-width: 768px) {
     .tips {
-        padding: 64px 0;
+        padding: 48px 0;
+    }
+
+    .tips .container {
+        max-width: 100%;
+        padding: 0 16px;
     }
 
     .tips-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .tips-description {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .tips-filters {
         gap: 12px;
-        margin-bottom: 32px;
     }
 
     .filter-btn {
-        padding: 10px 20px;
-        font-size: 13px;
+        padding: 8px 16px;
+        font-size: 12px;
     }
 
     .tips-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
+        max-width: 100%;
+    }
+
+    .tips-grid-index {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .tips-grid-4 {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .tips-grid.tips-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .tip-card {
         padding: 24px;
     }
-
-    .tip-header {
-        gap: 12px;
-        margin-bottom: 16px;
-    }
-
-    .tip-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .tip-title {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 480px) {
     .tips-title {
-        font-size: 28px;
+        font-size: 32px;
+    }
+
+    .tips-header,
+    .tips-filters,
+    .tips-grid {
+        padding: 0 8px;
     }
 
     .tip-card {
@@ -260,4 +389,19 @@
         gap: 12px;
         align-items: flex-start;
     }
+}
+
+.tips-grid-index {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 100%;
+}
+
+.tips-grid-index .tip-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.tips-grid.tips-grid-index {
+    grid-template-columns: 1fr;
+    max-width: 100%;
 }
