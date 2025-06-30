@@ -314,6 +314,411 @@
             "icon": "ph-fill ph-spray-bottle",
             "difficulty": "intermedio",
             "time": "20 min"
+        },
+        {
+            "id": 36,
+            "title": "Técnica de Cocción al Vapor",
+            "description": "Para cocción al vapor, usa una olla con colador o vaporera. El agua debe hervir suavemente y los alimentos no deben tocar el agua.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-waves",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 37,
+            "title": "Técnica de Salteado",
+            "description": "Para saltear correctamente, calienta el aceite hasta que esté muy caliente, agrega los ingredientes y mantén el fuego alto. Mueve constantemente.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "intermedio",
+            "time": "8 min"
+        },
+        {
+            "id": 38,
+            "title": "Técnica de Reducción",
+            "description": "Para reducir salsas, cocina a fuego medio-alto sin tapa. La evaporación concentra los sabores y espesa la salsa naturalmente.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "avanzado",
+            "time": "30 min"
+        },
+        {
+            "id": 39,
+            "title": "Técnica de Glaseado",
+            "description": "Para glasear vegetales, cocínalos hasta que estén tiernos, luego agrega mantequilla y azúcar. Cocina hasta que se forme un glaseado brillante.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-star",
+            "difficulty": "avanzado",
+            "time": "20 min"
+        },
+        {
+            "id": 40,
+            "title": "Técnica de Confitado",
+            "description": "Para confitar, cocina alimentos en grasa a baja temperatura (80-90°C) por tiempo prolongado. Ideal para carnes y vegetales.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "avanzado",
+            "time": "3 horas"
+        },
+        {
+            "id": 41,
+            "title": "Técnica de Escaldado",
+            "description": "Escalda vegetales en agua hirviendo por 30-60 segundos, luego sumérgelos en agua helada. Esto fija el color y facilita el pelado.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-waves",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 42,
+            "title": "Técnica de Asado",
+            "description": "Para asar correctamente, precalienta el horno, usa una bandeja con rejilla y rocía con aceite. Gira los alimentos a la mitad del tiempo.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-oven",
+            "difficulty": "intermedio",
+            "time": "45 min"
+        },
+        {
+            "id": 43,
+            "title": "Técnica de Brasear",
+            "description": "Para brasear, dora los alimentos primero, luego cocina en líquido a fuego lento con tapa. Ideal para carnes duras y vegetales.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-cooking-pot",
+            "difficulty": "avanzado",
+            "time": "2 horas"
+        },
+        {
+            "id": 44,
+            "title": "Técnica de Poaching",
+            "description": "Para poaching, mantén el líquido a 70-80°C (no hirviendo). Agrega vinagre o limón al agua para ayudar a coagular las proteínas.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-waves",
+            "difficulty": "intermedio",
+            "time": "12 min"
+        },
+        {
+            "id": 45,
+            "title": "Técnica de Fritura",
+            "description": "Para fritura perfecta, mantén el aceite a 180°C, no sobrecargues la freidora y seca los alimentos antes de freír.",
+            "category": "tecnicas",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "avanzado",
+            "time": "8 min"
+        },
+        {
+            "id": 46,
+            "title": "Conservación de Frutas",
+            "description": "Para conservar frutas, lávalas, sécalas completamente y guárdalas en contenedores herméticos en el refrigerador.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-apple-logo",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 47,
+            "title": "Conservación de Vegetales",
+            "description": "Envuelve vegetales de hoja en papel húmedo y guárdalos en el refrigerador. Los vegetales de raíz duran más en un lugar fresco y oscuro.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-carrot",
+            "difficulty": "fácil",
+            "time": "8 min"
+        },
+        {
+            "id": 48,
+            "title": "Conservación de Carnes",
+            "description": "Guarda las carnes en el refrigerador a 4°C o menos. Para congelar, envuelve en papel de aluminio y luego en plástico.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-cow",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 49,
+            "title": "Conservación de Pescado",
+            "description": "Guarda el pescado en hielo en el refrigerador. Consume dentro de 1-2 días para máxima frescura y sabor.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-fish",
+            "difficulty": "fácil",
+            "time": "3 min"
+        },
+        {
+            "id": 50,
+            "title": "Conservación de Lácteos",
+            "description": "Guarda los lácteos en la parte más fría del refrigerador. Nunca los dejes a temperatura ambiente por más de 2 horas.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 51,
+            "title": "Conservación de Pan",
+            "description": "Guarda el pan en una bolsa de papel en un lugar fresco y seco. Para congelar, corta en rebanadas y envuelve en plástico.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-bread",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 52,
+            "title": "Conservación de Salsas",
+            "description": "Guarda las salsas en contenedores herméticos en el refrigerador. Las salsas con huevo deben consumirse en 3-4 días.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-jar",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 53,
+            "title": "Conservación de Especias",
+            "description": "Guarda las especias en frascos herméticos lejos del calor y la luz. Reemplaza las especias molidas cada 6 meses.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-package",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 54,
+            "title": "Conservación de Aceites",
+            "description": "Guarda los aceites en botellas oscuras lejos del calor. El aceite de oliva se conserva mejor en el refrigerador.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 55,
+            "title": "Conservación de Vinos",
+            "description": "Guarda los vinos en un lugar fresco y oscuro a 12-18°C. Los vinos tintos se conservan mejor que los blancos.",
+            "category": "conservacion",
+            "icon": "ph-fill ph-wine",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 56,
+            "title": "Balance de Acidez",
+            "description": "Para balancear la acidez, agrega un toque de dulce (miel, azúcar) o grasa (mantequilla, aceite). Esto suaviza los sabores ácidos.",
+            "category": "sabores",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 57,
+            "title": "Profundidad de Sabor",
+            "description": "Para profundidad de sabor, usa técnicas como dorar, caramelizar y reducir. Estas técnicas concentran y intensifican los sabores.",
+            "category": "sabores",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "avanzado",
+            "time": "20 min"
+        },
+        {
+            "id": 58,
+            "title": "Contraste de Texturas",
+            "description": "Combina texturas contrastantes: crujiente con suave, cremoso con crocante. Esto crea una experiencia sensorial más interesante.",
+            "category": "sabores",
+            "icon": "ph-fill ph-star",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 59,
+            "title": "Uso de Umami",
+            "description": "Para potenciar el umami, usa ingredientes como parmesano, tomates secos, champiñones, salsa de soja o anchoas.",
+            "category": "sabores",
+            "icon": "ph-fill ph-heart",
+            "difficulty": "avanzado",
+            "time": "10 min"
+        },
+        {
+            "id": 60,
+            "title": "Marinados Aromáticos",
+            "description": "Para marinados aromáticos, combina hierbas frescas, especias, aceite y ácido. Deja marinar por al menos 30 minutos.",
+            "category": "sabores",
+            "icon": "ph-fill ph-leaf",
+            "difficulty": "intermedio",
+            "time": "30 min"
+        },
+        {
+            "id": 61,
+            "title": "Reducción de Sal",
+            "description": "Para reducir sal sin perder sabor, usa hierbas frescas, especias, limón, vinagre o ajo. Estos ingredientes potencian el sabor natural.",
+            "category": "sabores",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 62,
+            "title": "Sabor Ahumado",
+            "description": "Para sabor ahumado, usa pimentón ahumado, chipotle, o técnicas como ahumar en papel de aluminio con hierbas.",
+            "category": "sabores",
+            "icon": "ph-fill ph-flame",
+            "difficulty": "avanzado",
+            "time": "15 min"
+        },
+        {
+            "id": 63,
+            "title": "Presentación en Capas",
+            "description": "Para presentación en capas, apila ingredientes de forma ordenada. Usa moldes o aros para crear capas perfectas.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-stack",
+            "difficulty": "avanzado",
+            "time": "20 min"
+        },
+        {
+            "id": 64,
+            "title": "Garnitura Elegante",
+            "description": "Para garnitura elegante, usa hierbas frescas, flores comestibles, ralladura de cítricos o frutos secos picados.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-flower",
+            "difficulty": "intermedio",
+            "time": "8 min"
+        },
+        {
+            "id": 65,
+            "title": "Platos de Colores",
+            "description": "Usa platos de colores que contrasten con la comida. Platos blancos o negros resaltan cualquier color de comida.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-palette",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 66,
+            "title": "Altura en Presentación",
+            "description": "Crea altura en la presentación apilando ingredientes o usando moldes. Esto hace que el plato se vea más elegante.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-arrow-up",
+            "difficulty": "intermedio",
+            "time": "15 min"
+        },
+        {
+            "id": 67,
+            "title": "Salsas Decorativas",
+            "description": "Para salsas decorativas, usa botellas con punta fina o cucharas. Crea diseños como puntos, líneas o espirales.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-paint-brush",
+            "difficulty": "avanzado",
+            "time": "10 min"
+        },
+        {
+            "id": 68,
+            "title": "Cortes Uniformes",
+            "description": "Para cortes uniformes, usa cuchillos afilados y corta todos los ingredientes del mismo tamaño. Esto mejora la presentación.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-knife",
+            "difficulty": "intermedio",
+            "time": "12 min"
+        },
+        {
+            "id": 69,
+            "title": "Temperatura de Servicio",
+            "description": "Sirve los platos a la temperatura correcta. Los platos calientes deben estar calientes y los fríos, fríos.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-thermometer",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 70,
+            "title": "Limpieza del Plato",
+            "description": "Mantén el borde del plato limpio. Usa una servilleta húmeda para limpiar cualquier derrame o mancha.",
+            "category": "presentacion",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "3 min"
+        },
+        {
+            "id": 71,
+            "title": "Prevención de Contaminación",
+            "description": "Usa guantes desechables al manipular alimentos crudos y cámbialos frecuentemente. Lava utensilios entre diferentes tipos de alimentos.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 72,
+            "title": "Temperatura de Cocción",
+            "description": "Usa un termómetro de cocina para verificar la temperatura interna de las carnes. Res: 63°C, Pollo: 74°C, Cerdo: 71°C.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer-hot",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 73,
+            "title": "Enfriamiento Rápido",
+            "description": "Para enfriar alimentos calientes, divide en porciones pequeñas y refrigera en recipientes poco profundos. No más de 2 horas a temperatura ambiente.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "intermedio",
+            "time": "30 min"
+        },
+        {
+            "id": 74,
+            "title": "Descongelación Segura",
+            "description": "Descongela alimentos en el refrigerador, en agua fría cambiada cada 30 minutos, o en el microondas. Nunca a temperatura ambiente.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-snowflake",
+            "difficulty": "fácil",
+            "time": "varía"
+        },
+        {
+            "id": 75,
+            "title": "Limpieza de Superficies",
+            "description": "Limpia y desinfecta todas las superficies de trabajo antes y después de preparar alimentos. Usa solución de cloro 1:10.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-spray-bottle",
+            "difficulty": "fácil",
+            "time": "10 min"
+        },
+        {
+            "id": 76,
+            "title": "Almacenamiento de Huevos",
+            "description": "Guarda los huevos en el refrigerador a 4°C o menos. No los laves antes de guardar, solo antes de usar.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-egg",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 77,
+            "title": "Prevención de Contaminación Cruzada",
+            "description": "Usa tablas de corte de diferentes colores para diferentes tipos de alimentos. Rojo para carnes, verde para vegetales, azul para pescado.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-shield-check",
+            "difficulty": "intermedio",
+            "time": "5 min"
+        },
+        {
+            "id": 78,
+            "title": "Temperatura del Refrigerador",
+            "description": "Mantén el refrigerador a 4°C o menos y el congelador a -18°C. Verifica la temperatura regularmente con un termómetro.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-thermometer-cold",
+            "difficulty": "fácil",
+            "time": "2 min"
+        },
+        {
+            "id": 79,
+            "title": "Limpieza de Frutas y Verduras",
+            "description": "Lava todas las frutas y verduras bajo agua corriente, incluso las que tienen cáscara. Usa un cepillo para productos con cáscara dura.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-drop",
+            "difficulty": "fácil",
+            "time": "5 min"
+        },
+        {
+            "id": 80,
+            "title": "Prevención de Intoxicaciones",
+            "description": "Nunca pruebes alimentos que huelan mal o tengan textura extraña. En caso de duda, desecha el alimento.",
+            "category": "seguridad",
+            "icon": "ph-fill ph-warning",
+            "difficulty": "fácil",
+            "time": "1 min"
         }
     ],
     "kitchen_tips": [
